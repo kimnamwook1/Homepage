@@ -68,6 +68,15 @@ body {
   padding: 0;
 }
 
+/* For로 시작하는 메뉴 항목에 수직 패딩 추가 */
+.main-navigation .main-menu-link[href^="/consulting"],
+.main-navigation .main-menu-link[href^="/mvai"],
+.main-navigation .main-menu-link[href^="/unreal"],
+.main-navigation .main-menu-link[href^="/enterprise"] {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
 .main-navigation .main-menu-link:hover,
 .main-navigation .main-menu-link.active {
   color: #bb1c33;
