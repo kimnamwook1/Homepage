@@ -3,7 +3,12 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { Menu } from "lucide-react";
 
-const Navigation = ({ transparent = false, activePage = null }) => {
+type NavigationProps = {
+  transparent?: boolean;
+  activePage?: string | null;
+};
+
+const Navigation = ({ transparent = false, activePage = null }: NavigationProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
