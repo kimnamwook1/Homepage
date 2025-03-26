@@ -1,7 +1,6 @@
 import Link from "next/link";
-import Image from "next/image";
 import { useState, useEffect } from "react";
-import { Menu } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 type NavigationProps = {
   transparent?: boolean;
@@ -25,105 +24,119 @@ const Navigation = ({ transparent = false, activePage = null }: NavigationProps)
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navClass = "fixed top-0 left-0 right-0 z-50 bg-white text-black";
-  
-  // Text color is now always black
-  const textColor = "text-black";
-  
-  // Only show the active page name in the top right for desktop
-  const getActivePageName = () => {
-    switch(activePage) {
-      case 'consulting': return 'For Consulting';
-      case 'mvai': return 'For MVAI';
-      case 'unreal': return 'For Unreal';
-      case 'enterprise': return 'For Enterprise';
-      default: return '';
+  // Control body scroll when menu is open
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
     }
-  };
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isMenuOpen]);
+
+  const headerClass = transparent
+    ? `site-header ${isScrolled ? "white-bg" : ""}`
+    : "site-header white-bg";
 
   return (
     <>
-      {/* Top navigation - only shows the current page on desktop */}
-      <div className={navClass}>
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <div className="flex items-center">
-            <Link href="/" className="flex items-center">
-              <span className="text-xl font-semibold"><span className="font-bold">T</span>he <span className="font-bold">JPC</span></span>
-            </Link>
-          </div>
+      {/* Header with logo and menu trigger */}
+      <header id="header" className={headerClass}>
+        <div className="site-header-container">
+          <Link href="/" className="logo" aria-label="Home">
+            <span className="text-xl font-semibold">
+              <span className="font-bold">T</span>he <span className="font-bold">JPC</span>
+            </span>
+          </Link>
 
-          {/* Show only the active page name in top right for desktop */}
-          <div className="hidden md:block">
-            {activePage && (
-              <span className={`font-medium text-sm ${textColor}`}>
-                {getActivePageName()}
-              </span>
-            )}
-          </div>
-
-          {/* Mobile menu button */}
           <button
-            className={`md:hidden border-none bg-transparent cursor-pointer ${textColor}`}
+            id="nav-trigger"
+            className={`nav-trigger ${isMenuOpen ? 'active' : ''}`}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Menu"
+            aria-expanded={isMenuOpen}
           >
-            <Menu size={24} />
+            <span></span>
+            <span></span>
+            <span></span>
           </button>
         </div>
-      </div>
+      </header>
 
-      {/* Left side vertical navigation moved to center - visible on desktop or when mobile menu is open */}
-      <div 
-        className={`fixed left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white py-10 px-16 shadow-xl border border-gray-200 rounded z-40 transition-opacity duration-300 ${
-          isMenuOpen ? 'opacity-100 visible' : 'opacity-100 visible'
-        }`}
-      >
-        <div className="flex flex-col space-y-6">
-          <Link 
-            href="/consulting" 
-            className={`font-medium text-xl hover:text-primary-caa-red ${activePage === 'consulting' ? 'text-primary-caa-red' : 'text-black'}`}
-          >
-            For Consulting
-          </Link>
-          <Link 
-            href="/mvai" 
-            className={`font-medium text-xl hover:text-primary-caa-red ${activePage === 'mvai' ? 'text-primary-caa-red' : 'text-black'}`}
-          >
-            For MVAI
-          </Link>
-          <Link 
-            href="/unreal" 
-            className={`font-medium text-xl hover:text-primary-caa-red ${activePage === 'unreal' ? 'text-primary-caa-red' : 'text-black'}`}
-          >
-            For Unreal
-          </Link>
-          <Link 
-            href="/enterprise" 
-            className={`font-medium text-xl hover:text-primary-caa-red ${activePage === 'enterprise' ? 'text-primary-caa-red' : 'text-black'}`}
-          >
-            For Enterprise
-          </Link>
-          
-          <div className="mt-10 space-y-3">
-            <Link href="/about-us" className="font-medium text-base text-black hover:text-primary-caa-red block">
-              About
-            </Link>
-            <Link href="/careers" className="font-medium text-base text-black hover:text-primary-caa-red block">
-              Careers
-            </Link>
-            <Link href="/contact" className="font-medium text-base text-black hover:text-primary-caa-red block">
-              Contact
-            </Link>
+      {/* Full screen menu overlay */}
+      <div className={`nav-overlay ${isMenuOpen ? 'active' : ''}`} id="navigation">
+        <div className="menu-container">
+          <nav className="global-nav">
+            <ul>
+              <li>
+                <Link 
+                  href="/consulting" 
+                  className={activePage === 'consulting' ? 'active' : ''}
+                >
+                  For Consulting
+                </Link>
+                <ul>
+                  <li><Link href="/consulting/services" className="linkTo">Services</Link></li>
+                  <li><Link href="/consulting/clients" className="linkTo">Clients</Link></li>
+                </ul>
+              </li>
+
+              <li>
+                <Link 
+                  href="/mvai" 
+                  className={activePage === 'mvai' ? 'active' : ''}
+                >
+                  For MVAI
+                </Link>
+                <ul>
+                  <li><Link href="/mvai/portfolio" className="linkTo">Portfolio</Link></li>
+                  <li><Link href="/mvai/services" className="linkTo">Services</Link></li>
+                </ul>
+              </li>
+
+              <li>
+                <Link 
+                  href="/unreal" 
+                  className={activePage === 'unreal' ? 'active' : ''}
+                >
+                  For Unreal
+                </Link>
+                <ul>
+                  <li><Link href="/unreal/studio" className="linkTo">Studio</Link></li>
+                  <li><Link href="/unreal/services" className="linkTo">Services</Link></li>
+                </ul>
+              </li>
+
+              <li>
+                <Link 
+                  href="/enterprise" 
+                  className={activePage === 'enterprise' ? 'active' : ''}
+                >
+                  For Enterprise
+                </Link>
+                <ul>
+                  <li><Link href="/enterprise/business" className="linkTo">Business Solutions</Link></li>
+                  <li><Link href="/enterprise/advisory" className="linkTo">Advisory</Link></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+
+          <div className="overlay-footer">
+            <div className="homepage-ft">
+              <nav>
+                <ul>
+                  <li><Link href="/about-us">About</Link></li>
+                  <li><Link href="/careers">Careers</Link></li>
+                  <li><Link href="/contact">Contact</Link></li>
+                </ul>
+              </nav>
+            </div>
           </div>
         </div>
       </div>
-
-      {/* Menu backdrop - only visible on mobile */}
-      {isMenuOpen && (
-        <div 
-          className="fixed inset-0 bg-black bg-opacity-50 z-30"
-          onClick={() => setIsMenuOpen(false)}
-        />
-      )}
     </>
   );
 };
