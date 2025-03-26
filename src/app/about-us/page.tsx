@@ -14,8 +14,8 @@ export default function AboutUs() {
   return (
     <main className={`min-h-screen flex flex-col ${isDarkMode ? 'bg-[#121212]' : 'bg-white'}`}>
       {/* 좌상단 로고 */}
-      <div className="fixed top-0 left-0 p-5 z-40">
-        <Link href="/">
+      <div className="header">
+        <Link href="/" className="logo">
           <Image 
             src={logoSrc}
             alt="The JPC Logo" 
