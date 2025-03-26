@@ -2,19 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-.vertical-menu {
-  min-width: 220px;
-  border: 1px solid #eaeaea;
-  border-radius: 4px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+/* Custom Colors */
+.bg-dark-blue {
+  background-color: #24272e;
 }
 
-.vertical-menu a {
-  position: relative;
-}
-
-.vertical-menu a.font-bold {
+.text-primary-caa-red {
   color: #bb1c33;
+}
+
+.bg-primary-caa-red {
+  background-color: #bb1c33;
 }
 
 @layer base {

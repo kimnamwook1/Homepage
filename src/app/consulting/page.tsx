@@ -2,10 +2,10 @@
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 
-export default function Home() {
+export default function Consulting() {
   return (
     <main className="min-h-screen flex flex-col">
-      <Navigation transparent={false} />
+      <Navigation transparent={false} activePage="consulting" />
 
       {/* Full height hero section with red background */}
       <section className="bg-primary-caa-red min-h-screen w-full flex items-center justify-center pt-20">

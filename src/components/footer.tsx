@@ -3,9 +3,9 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="footer">
-      <div className="container mx-auto">
-        <div className="footer-logo">
+    <footer className="bg-primary-caa-red text-white py-10">
+      <div className="container mx-auto px-4">
+        <div className="mb-10">
           <Link href="/">
             <Image
               src="/images/thejpc-logo.svg"
@@ -17,29 +17,27 @@ const Footer = () => {
           </Link>
         </div>
 
-        <div className="footer-links mb-10">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            <div>
-              <Link href="/about-us" className="block mb-2">About Us</Link>
-              <Link href="/social-responsibility" className="block mb-2">Social Responsibility</Link>
-              <Link href="/careers" className="block mb-2">Careers</Link>
-            </div>
-            <div>
-              <Link href="/foundation" className="block mb-2">Foundation</Link>
-              <Link href="/privacy-policy" className="block mb-2">Privacy</Link>
-              <Link href="/terms-of-use" className="block mb-2">Terms</Link>
-            </div>
-            <div>
-              <Link href="/newsroom" className="block mb-2">Newsroom</Link>
-              <Link href="/contact-us" className="block mb-2">Contact Us</Link>
-              <Link href="/human-rights" className="block mb-2">Human Rights</Link>
-            </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <Link href="/about-us" className="block mb-3 hover:underline">About Us</Link>
+            <Link href="/social-responsibility" className="block mb-3 hover:underline">Social Responsibility</Link>
+            <Link href="/careers" className="block mb-3 hover:underline">Careers</Link>
+          </div>
+          <div>
+            <Link href="/foundation" className="block mb-3 hover:underline">Foundation</Link>
+            <Link href="/privacy-policy" className="block mb-3 hover:underline">Privacy</Link>
+            <Link href="/terms-of-use" className="block mb-3 hover:underline">Terms</Link>
+          </div>
+          <div>
+            <Link href="/newsroom" className="block mb-3 hover:underline">Newsroom</Link>
+            <Link href="/contact" className="block mb-3 hover:underline">Contact Us</Link>
+            <Link href="/human-rights" className="block mb-3 hover:underline">Human Rights</Link>
           </div>
         </div>
 
-        <div className="social-links">
-          <p className="mr-2 text-sm">Follow us:</p>
-          <Link href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+        <div className="mt-10 flex items-center">
+          <span className="mr-4">Follow us:</span>
+          <Link href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className="mr-3">
             <Image
               src="/images/instagram-icon.svg"
               alt="Instagram"
