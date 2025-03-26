@@ -81,9 +81,19 @@ body {
   padding-bottom: 5px;
 }
 
-.main-navigation .main-menu-link:hover,
+/* 기본 호버 상태 */
+.main-navigation .main-menu-link:hover {
+  color: #bb1c33;
+}
+
+/* 활성화된 메뉴 항목 */
 .main-navigation .main-menu-link.active {
   color: #bb1c33;
+}
+
+/* 메뉴 클릭 모드 - 다른 메뉴에 호버 효과 없음 */
+.menu-clicked .main-menu-link:not(.active):hover {
+  color: black; /* 호버해도 색상 변경 없음 */
 }
 
 /* Footer Navigation */
@@ -111,8 +121,19 @@ body {
   transition: color 0.3s;
 }
 
+/* Footer 호버 상태 */
 .footer-navigation a:hover {
   color: #bb1c33;
+}
+
+/* Footer 활성화 상태 */
+.footer-navigation a.active {
+  color: #bb1c33;
+}
+
+/* 메뉴 클릭 모드 - 다른 메뉴에 호버 효과 없음 (푸터 포함) */
+.menu-clicked .footer-navigation a:not(.active):hover {
+  color: black; /* 호버해도 색상 변경 없음 */
 }
 
 /* 반응형 스타일링 - 높이 고정 */

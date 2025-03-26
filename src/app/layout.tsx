@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { pfdintextpro } from "./fonts";
+import { MenuProvider } from "@/lib/MenuContext";
 
 export const metadata: Metadata = {
   title: "TheJPC",
@@ -14,7 +15,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={pfdintextpro.variable}>{children}</body>
+      <body className={pfdintextpro.variable}>
+        <MenuProvider>
+          {children}
+        </MenuProvider>
+      </body>
     </html>
   );
 }
