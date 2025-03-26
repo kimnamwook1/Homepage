@@ -1,94 +1,39 @@
 "use client";
-import Navigation from "@/components/navigation";
-import Footer from "@/components/footer";
+import Image from "next/image";
+import Link from "next/link";
+import Hamburger from "@/components/hamburger";
+import useDarkMode from "@/lib/useDarkMode";
 
 export default function Contact() {
+  const isDarkMode = useDarkMode();
+  
+  // 다크모드에 따라 로고 이미지 선택
+  const logoSrc = isDarkMode 
+    ? "/images/TheJPC_logo_White.png" 
+    : "/images/TheJPC_logo_Blacked.png";
   return (
-    <main className="min-h-screen flex flex-col">
-      <Navigation transparent={false} />
+    <main className={`min-h-screen flex flex-col ${isDarkMode ? 'bg-[#121212]' : 'bg-white'}`}>
+      {/* 좌상단 로고 */}
+      <div className="fixed top-0 left-0 p-5 z-40">
+        <Link href="/">
+          <Image 
+            src={logoSrc}
+            alt="The JPC Logo" 
+            width={120} 
+            height={48} 
+            priority
+          />
+        </Link>
+      </div>
 
-      <section className="contact-section">
-        <div className="container mx-auto max-w-6xl">
-          <h1>Contact</h1>
+      {/* 햄버거 메뉴 */}
+      <Hamburger />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            <div className="contact-card">
-              <h2>Los Angeles</h2>
-              <div className="contact-info">
-                <p>2000 Avenue of the Stars</p>
-                <p>Los Angeles, CA 90067</p>
-                <p>t: +1 424 288 2000</p>
-              </div>
-            </div>
-
-            <div className="contact-card">
-              <h2>New York</h2>
-              <div className="contact-info">
-                <p>405 Lexington Avenue, 22nd Floor</p>
-                <p>New York, NY 10174</p>
-                <p>t: +1 212 277 9000</p>
-              </div>
-            </div>
-
-            <div className="contact-card">
-              <h2>Nashville</h2>
-              <div className="contact-info">
-                <p>401 Commerce Street, Penthouse</p>
-                <p>Nashville, TN 37219</p>
-                <p>t: +1 615 383 8787</p>
-              </div>
-            </div>
-
-            <div className="contact-card">
-              <h2>Washington D.C.</h2>
-              <div className="contact-info">
-                <p>1500 K Street NW</p>
-                <p>Washington DC, 20005</p>
-                <p>t: +1 771 444 5301</p>
-              </div>
-            </div>
-
-            <div className="contact-card">
-              <h2>London</h2>
-              <div className="contact-info">
-                <p>12 Hammersmith Grove</p>
-                <p>London W6 7AP</p>
-                <p>United Kingdom</p>
-                <p>t: +44 20 8846 3000</p>
-              </div>
-            </div>
-
-            <div className="contact-card">
-              <h2>Beijing</h2>
-              <div className="contact-info">
-                <p>5/F, World Financial Center</p>
-                <p>1E 3rd Ring Middle Rd, Guomao</p>
-                <p>Chaoyang, Beijing, China, 100020</p>
-              </div>
-            </div>
-
-            <div className="contact-card">
-              <h2>Shanghai</h2>
-              <div className="contact-info">
-                <p>Unit 2704-2705, Tower 3</p>
-                <p>Shanghai Jing An Kerry Center</p>
-                <p>1228 Yan An Middle Road</p>
-                <p>Shanghai, China 200040</p>
-              </div>
-            </div>
-
-            <div className="contact-card">
-              <h2>Singapore</h2>
-              <div className="contact-info">
-                <p>88 Market Street, 40th Floor</p>
-                <p>Singapore 048948</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <Footer />
+      {/* 중앙 콘텐츠 */}
+      <div className="flex flex-col items-center justify-center min-h-screen p-4">
+        <h1 className="text-[#bb1c33] text-4xl md:text-6xl font-bold mb-12">Contact</h1>
+        <h2 className="text-[#121212] text-5xl md:text-8xl font-bold text-center work-in-progress">Work In Progress</h2>
+      </div>
     </main>
   );
 }
