@@ -30,14 +30,14 @@ export default function Contact() {
         <Hamburger />
 
         {/* Contact 제목 */}
-        <div className="container mx-auto px-8 pb-32 mt-auto">
+        <div className="container mx-auto px-8 pb-32 mt-auto pl-24">
           <h1 className="text-8xl md:text-[12rem] font-bold tracking-tighter">Contact</h1>
         </div>
       </section>
 
       {/* 하단 콘텐츠 섹션 */}
       <section className={`${isDarkMode ? 'bg-[#121212] text-white' : 'bg-white text-black'} h-[50vh] py-20`}>
-        <div className="container mx-auto px-8">
+        <div className="container mx-auto px-8 pl-24">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
             {/* 좌측 섹션 */}
             <div className="md:pr-8">
