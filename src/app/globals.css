@@ -36,8 +36,8 @@ body {
 
 .logo {
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 220px; /* 상단에서 20px + 200px = 220px */
+  left: 220px; /* 좌측에서 20px + 200px = 220px */
   text-decoration: none;
   display: block;
 }
@@ -238,6 +238,11 @@ body {
   .footer-navigation {
     margin-top: 30px;
   }
+  
+  .logo {
+    top: 220px;
+    left: 250px; /* 화면이 클 때 로고 위치 조정 */
+  }
 }
 
 @media (max-width: 1200px) {
@@ -253,6 +258,11 @@ body {
   .footer-navigation {
     margin-top: 30px;
   }
+  
+  .logo {
+    top: 220px;
+    left: 220px;
+  }
 }
 
 @media (max-width: 992px) {
@@ -267,6 +277,11 @@ body {
   
   .footer-navigation {
     margin-top: 30px;
+  }
+  
+  .logo {
+    top: 220px;
+    left: 170px; /* 화면이 작아질 때 로고 위치 조정 */
   }
 }
 
@@ -284,7 +299,12 @@ body {
     margin-top: 30px;
   }
   
-  /* 모바일에서 로고 크기 조정 */
+  /* 모바일에서 로고 위치 및 크기 조정 */
+  .logo {
+    top: 190px;
+    left: 120px;
+  }
+  
   .logo img {
     max-height: 40px;
   }
@@ -308,7 +328,12 @@ body {
     font-size: 0.96rem; /* 1.2rem * 0.8 = 0.96rem */
   }
   
-  /* 작은 모바일에서 로고 크기 조정 */
+  /* 작은 모바일에서 로고 위치 및 크기 조정 */
+  .logo {
+    top: 170px;
+    left: 70px;
+  }
+  
   .logo img {
     max-height: 32px;
   }
