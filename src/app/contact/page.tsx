@@ -12,10 +12,10 @@ export default function Contact() {
   return (
     <main className="min-h-screen flex flex-col">
       {/* 상단 섹션 - Bordeaux 빨간색 배경 */}
-      <section className="bg-[#9B2335] text-white pt-5 pb-20 md:pb-40 relative">
+      <section className="bg-[#9B2335] text-white pt-5 pb-40 md:pb-80 h-1/2 relative">
         {/* 로고 */}
-        <div className="absolute top-5 left-5 md:top-5 md:left-10 z-40">
-          <Link href="/" className="block">
+        <div className="header">
+          <Link href="/" className="logo">
             <Image 
               src={logoSrc}
               alt="The JPC Logo" 
@@ -31,7 +31,7 @@ export default function Contact() {
 
         {/* Contact 제목 */}
         <div className="container mx-auto px-4 pt-24 md:pt-32">
-          <h1 className="text-6xl md:text-9xl font-bold tracking-tighter">Contact</h1>
+          <h1 className="text-8xl md:text-[12rem] font-bold tracking-tighter">Contact</h1>
         </div>
       </section>
 
@@ -41,15 +41,13 @@ export default function Contact() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* 좌측 섹션 */}
             <div className="md:pr-8">
-              <h2 className="text-2xl md:text-3xl font-semibold mb-6">주소, 정보, sns 기입</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">Seoul</h2>
               <div className="h-1 w-16 bg-[#9B2335] mb-8"></div>
-              {/* 여기에 SNS 링크나 추가 정보 */}
             </div>
 
             {/* 우측 섹션 - 서울 주소 */}
-            <div className="md:pl-8">
-              <h2 className="text-2xl md:text-4xl font-bold mb-6">Seoul</h2>
-              <div className="space-y-2 text-lg">
+            <div className="md:pl-8 md:mt-12">
+              <div className="space-y-2 text-lg md:mt-0 mt-8">
                 <p>180, Bangbae-ro, Seocho-gu</p>
                 <p>Seoul, Republic of Korea 06586</p>
                 <p className="mt-4">E: jonathankim@thejpc.kr</p>
