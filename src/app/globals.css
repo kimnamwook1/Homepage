@@ -49,13 +49,13 @@ body {
   width: auto;
 }
 
-/* Main Navigation - CAA 스타일 적용 (높이 고정) */
+/* Main Navigation - CAA 스타일 적용 (반응형) */
 .main-navigation {
   position: fixed;
-  top: 250px; /* 모든 해상도에서 고정된 높이 */
-  left: 300px; /* 기본 위치를 300px로 변경 */
+  top: 45px;  /* 기본 위치를 CAA 사이트와 유사하게 조정 */
+  left: 300px; /* 기본 위치를 300px로 유지 */
   z-index: 40;
-  transform: none !important; /* 변환 방지 */
+  transform: none; /* 변환 방지 (!important 제거로 유연성 확보) */
 }
 
 .main-navigation ul {
@@ -228,7 +228,7 @@ body {
 @media (min-width: 1400px) {
   .main-navigation {
     left: 350px;
-    top: 250px !important;
+    top: 60px;
   }
   
   .main-navigation .main-menu-link {
@@ -243,7 +243,7 @@ body {
 @media (max-width: 1200px) {
   .main-navigation {
     left: 250px;
-    top: 250px !important;
+    top: 55px;
   }
   
   .main-navigation .main-menu-link {
@@ -258,7 +258,7 @@ body {
 @media (max-width: 992px) {
   .main-navigation {
     left: 200px;
-    top: 250px !important;
+    top: 50px;
   }
   
   .main-navigation .main-menu-link {
@@ -273,7 +273,7 @@ body {
 @media (max-width: 768px) {
   .main-navigation {
     left: 150px;
-    top: 250px !important;
+    top: 200px; /* 모바일에서는 상단으로부터 더 멀리 */
   }
   
   .main-navigation .main-menu-link {
@@ -293,7 +293,7 @@ body {
 @media (max-width: 576px) {
   .main-navigation {
     left: 80px;
-    top: 250px !important;
+    top: 180px;
   }
   
   .main-navigation .main-menu-link {
