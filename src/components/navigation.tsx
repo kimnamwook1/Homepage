@@ -129,18 +129,7 @@ const Navigation = ({ transparent = false }: NavigationProps) => {
               For Unreal
             </Link>
           </li>
-          <li className="main-menu-item">
-            <Link 
-              href="/enterprise" 
-              className={`main-menu-link ${activePage === 'enterprise' ? 'active' : ''}`}
-              onClick={() => {
-                setActivePage('enterprise');
-                setMenuActive(true);
-              }}
-            >
-              For Enterprise
-            </Link>
-          </li>
+
           
           {/* Footer navigation */}
           <li className="footer-navigation">

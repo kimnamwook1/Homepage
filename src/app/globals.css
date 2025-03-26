@@ -55,6 +55,7 @@ body {
   top: 250px; /* 모든 해상도에서 고정된 높이 */
   left: 300px; /* 기본 위치를 300px로 변경 */
   z-index: 40;
+  transform: none !important; /* 변환 방지 */
 }
 
 .main-navigation ul {
@@ -86,9 +87,7 @@ body {
   animation-delay: 300ms;
 }
 
-.main-navigation .main-menu-item:nth-child(4) {
-  animation-delay: 450ms;
-}
+
 
 .main-navigation .footer-navigation {
   opacity: 0;
@@ -97,7 +96,7 @@ body {
 
 .main-navigation.animate-in .footer-navigation {
   animation: fadeInUp 0.5s ease forwards;
-  animation-delay: 600ms;
+  animation-delay: 450ms; /* Enterprise 항목 제거로 인해 지연 시간 조정 */
 }
 
 .main-navigation .main-menu-link {
@@ -152,7 +151,7 @@ body {
   position: absolute;
   top: 100%;
   left: 0;
-  margin-top: 45px; /* 15px * 3 = 45px로 변경 */
+  margin-top: 30px; /* For Enterprise 항목 제거로 인해 간격 조정 */
 }
 
 .footer-navigation ul {
@@ -172,11 +171,11 @@ body {
 }
 
 .footer-navigation li:nth-child(1) {
-  animation-delay: 650ms;
+  animation-delay: 500ms; /* 지연 시간 조정 */
 }
 
 .footer-navigation li:nth-child(2) {
-  animation-delay: 750ms;
+  animation-delay: 600ms; /* 지연 시간 조정 */
 }
 
 .footer-navigation a {
@@ -225,21 +224,26 @@ body {
   }
 }
 
-/* 반응형 스타일링 - 높이 고정 */
+/* 반응형 스타일링 - CAA 레퍼런스 사이트와 동일하게 설정 */
 @media (min-width: 1400px) {
   .main-navigation {
-    left: 350px; /* 큰 화면에서 위치 조정 (수평만 변경) */
+    left: 350px;
+    top: 250px !important;
   }
   
   .main-navigation .main-menu-link {
     font-size: 3.2rem; /* 4rem * 0.8 = 3.2rem */
   }
+  
+  .footer-navigation {
+    margin-top: 30px;
+  }
 }
 
 @media (max-width: 1200px) {
   .main-navigation {
-    left: 250px; /* 작은 화면에서 위치 조정 (수평만 변경) */
-    /* top 값 제거 - 항상 250px로 고정 */
+    left: 250px;
+    top: 250px !important;
   }
   
   .main-navigation .main-menu-link {
@@ -247,14 +251,14 @@ body {
   }
   
   .footer-navigation {
-    margin-top: 40px;
+    margin-top: 30px;
   }
 }
 
 @media (max-width: 992px) {
   .main-navigation {
-    left: 200px; /* 작은 화면에서 위치 조정 (수평만 변경) */
-    /* top 값 제거 - 항상 250px로 고정 */
+    left: 200px;
+    top: 250px !important;
   }
   
   .main-navigation .main-menu-link {
@@ -262,14 +266,14 @@ body {
   }
   
   .footer-navigation {
-    margin-top: 35px;
+    margin-top: 30px;
   }
 }
 
 @media (max-width: 768px) {
   .main-navigation {
-    left: 150px; /* 작은 화면에서 위치 조정 (수평만 변경) */
-    /* top 값 제거 - 항상 250px로 고정 */
+    left: 150px;
+    top: 250px !important;
   }
   
   .main-navigation .main-menu-link {
@@ -288,8 +292,8 @@ body {
 
 @media (max-width: 576px) {
   .main-navigation {
-    left: 80px; /* 작은 화면에서 위치 조정 (수평만 변경) */
-    /* top 값 제거 - 항상 250px로 고정 */
+    left: 80px;
+    top: 250px !important;
   }
   
   .main-navigation .main-menu-link {
