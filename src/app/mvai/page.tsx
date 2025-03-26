@@ -5,7 +5,7 @@ import Footer from "@/components/footer";
 export default function MVAI() {
   return (
     <main className="min-h-screen flex flex-col">
-      <Navigation transparent={false} activePage="mvai" />
+      <Navigation transparent={false} />
 
       {/* Content section with white background */}
       <section className="bg-white min-h-screen w-full" aria-hidden="true">
