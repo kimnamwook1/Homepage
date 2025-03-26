@@ -41,7 +41,7 @@ body {
 .main-navigation {
   position: fixed;
   top: 250px; /* 기본 위치 */
-  left: 400px; /* 기본 위치를 400px로 변경 */
+  left: 300px; /* 기본 위치를 300px로 변경 */
   z-index: 40;
 }
 
@@ -57,7 +57,7 @@ body {
 }
 
 .main-navigation .main-menu-link {
-  font-size: 3.5rem;
+  font-size: 2.8rem; /* 3.5rem * 0.8 = 2.8rem */
   font-weight: 600;
   color: black;
   text-decoration: none;
@@ -100,7 +100,7 @@ body {
 }
 
 .footer-navigation a {
-  font-size: 1.4rem;
+  font-size: 1.12rem; /* 1.4rem * 0.8 = 1.12rem */
   color: black;
   text-decoration: none;
   transition: color 0.3s;
@@ -113,33 +113,33 @@ body {
 /* 반응형 스타일링 */
 @media (min-width: 1400px) {
   .main-navigation {
-    left: 450px; /* 큰 화면에서 위치 조정 */
+    left: 350px; /* 큰 화면에서 위치 조정 */
   }
   
   .main-navigation .main-menu-link {
-    font-size: 4rem;
+    font-size: 3.2rem; /* 4rem * 0.8 = 3.2rem */
   }
 }
 
 @media (max-width: 1200px) {
   .main-navigation {
-    left: 350px; /* 작은 화면에서 위치 조정 */
+    left: 250px; /* 작은 화면에서 위치 조정 */
     top: 220px;
   }
   
   .main-navigation .main-menu-link {
-    font-size: 3.2rem;
+    font-size: 2.56rem; /* 3.2rem * 0.8 = 2.56rem */
   }
 }
 
 @media (max-width: 992px) {
   .main-navigation {
-    left: 250px; /* 작은 화면에서 위치 조정 */
+    left: 200px; /* 작은 화면에서 위치 조정 */
     top: 200px;
   }
   
   .main-navigation .main-menu-link {
-    font-size: 2.8rem;
+    font-size: 2.24rem; /* 2.8rem * 0.8 = 2.24rem */
   }
 }
 
@@ -150,7 +150,7 @@ body {
   }
   
   .main-navigation .main-menu-link {
-    font-size: 2.4rem;
+    font-size: 1.92rem; /* 2.4rem * 0.8 = 1.92rem */
   }
 }
 
@@ -161,10 +161,10 @@ body {
   }
   
   .main-navigation .main-menu-link {
-    font-size: 2rem;
+    font-size: 1.6rem; /* 2rem * 0.8 = 1.6rem */
   }
   
   .footer-navigation a {
-    font-size: 1.2rem;
+    font-size: 0.96rem; /* 1.2rem * 0.8 = 0.96rem */
   }
 }
