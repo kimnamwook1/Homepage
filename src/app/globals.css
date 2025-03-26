@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+.vertical-menu {
+  min-width: 220px;
+  border: 1px solid #eaeaea;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.vertical-menu a {
+  position: relative;
+}
+
+.vertical-menu a.font-bold {
+  color: #bb1c33;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -111,6 +126,7 @@ html, body {
   top: 0;
   z-index: 50;
   background-color: transparent;
+  width: 100%;
 }
 
 .main-navigation.white-bg {
