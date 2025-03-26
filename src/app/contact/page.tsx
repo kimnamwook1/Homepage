@@ -12,7 +12,7 @@ export default function Contact() {
   return (
     <main className="min-h-screen flex flex-col">
       {/* 상단 섹션 - Bordeaux 빨간색 배경 */}
-      <section className="bg-[#9B2335] text-white h-[50vh] flex flex-col justify-between relative">
+      <section className="bg-[#9B2335] text-white relative" style={{ height: '50vh' }}>
         {/* 로고 */}
         <div className="header">
           <Link href="/" className="logo">
@@ -29,27 +29,27 @@ export default function Contact() {
         {/* 햄버거 메뉴 */}
         <Hamburger />
 
-        {/* Contact 제목 */}
-        <div className="container mx-auto px-[4vw] pb-[min(12vh,8rem)] mt-auto pl-[max(4vw,8rem)]">
-          <h1 className="text-[clamp(3rem,8vw,9.6rem)] font-bold tracking-tighter">Contact</h1>
+        {/* Contact 제목 - 정확한 위치 지정 */}
+        <div className="absolute bottom-[15%] left-[10%]" style={{ width: '80%' }}>
+          <h1 style={{ fontSize: 'clamp(4rem, 10vw, 9.6rem)' }} className="font-bold tracking-tighter">Contact</h1>
         </div>
       </section>
 
       {/* 하단 콘텐츠 섹션 */}
-      <section className={`${isDarkMode ? 'bg-[#121212] text-white' : 'bg-white text-black'} min-h-[50vh] py-[min(8vh,5rem)]`}>
-        <div className="container mx-auto px-[4vw] pl-[max(4vw,8rem)]">
+      <section className={`${isDarkMode ? 'bg-[#121212] text-white' : 'bg-black text-white'} relative`} style={{ height: '50vh' }}>
+        <div className="absolute top-[20%] left-[10%] right-[10%]">
           <div className="flex flex-col md:flex-row gap-8">
             {/* 좌측 섹션 */}
-            <div className="md:pr-8 pl-0 md:w-1/3">
-              <h2 className="text-[clamp(2rem,5vw,7rem)] font-bold">Seoul</h2>
+            <div className="md:w-1/3">
+              <h2 style={{ fontSize: 'clamp(3rem, 6vw, 7rem)' }} className="font-bold">Seoul</h2>
             </div>
 
             {/* 우측 섹션 - 서울 주소 */}
-            <div className="md:pl-8 md:w-2/3">
-              <div className="space-y-2 text-[clamp(1rem,1.2vw,1.25rem)] mt-[clamp(1rem,2vw,1.5rem)]">
+            <div className="md:w-2/3 md:pl-8">
+              <div className="space-y-2" style={{ fontSize: 'clamp(1rem, 1.2vw, 1.25rem)' }}>
                 <p>180, Bangbae-ro, Seocho-gu</p>
                 <p>Seoul, Republic of Korea 06586</p>
-                <p className="mt-[clamp(1rem,2vw,1.5rem)]">E: jonathankim@thejpc.kr</p>
+                <p className="mt-4">E: jonathankim@thejpc.kr</p>
               </div>
             </div>
           </div>
