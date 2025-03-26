@@ -42,7 +42,7 @@ body {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-250px, -50%);
+  transform: translate(-450px, -50%); /* X축 이동 -250px에서 -450px로 변경 (200px 왼쪽으로 이동) */
   z-index: 40;
 }
 
