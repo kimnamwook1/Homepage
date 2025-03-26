@@ -36,8 +36,8 @@ body {
 
 .logo {
   position: absolute;
-  top: 220px; /* 상단에서 20px + 200px = 220px */
-  left: 220px; /* 좌측에서 20px + 200px = 220px */
+  top: 70px; /* 220px에서 150px 올림: 220 - 150 = 70 */
+  left: 120px; /* 220px에서 100px 좌측으로 이동: 220 - 100 = 120 */
   text-decoration: none;
   display: block;
 }
@@ -240,8 +240,8 @@ body {
   }
   
   .logo {
-    top: 220px;
-    left: 250px; /* 화면이 클 때 로고 위치 조정 */
+    top: 70px;
+    left: 150px; /* 화면이 클 때 로고 위치 조정 */
   }
 }
 
@@ -260,8 +260,8 @@ body {
   }
   
   .logo {
-    top: 220px;
-    left: 220px;
+    top: 70px;
+    left: 120px;
   }
 }
 
@@ -280,8 +280,8 @@ body {
   }
   
   .logo {
-    top: 220px;
-    left: 170px; /* 화면이 작아질 때 로고 위치 조정 */
+    top: 70px;
+    left: 70px; /* 화면이 작아질 때 로고 위치 조정 */
   }
 }
 
@@ -301,8 +301,8 @@ body {
   
   /* 모바일에서 로고 위치 및 크기 조정 */
   .logo {
-    top: 190px;
-    left: 120px;
+    top: 40px;
+    left: 20px;
   }
   
   .logo img {
@@ -330,8 +330,8 @@ body {
   
   /* 작은 모바일에서 로고 위치 및 크기 조정 */
   .logo {
-    top: 170px;
-    left: 70px;
+    top: 20px;
+    left: 20px;
   }
   
   .logo img {
