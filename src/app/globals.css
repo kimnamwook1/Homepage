@@ -37,10 +37,10 @@ body {
   text-decoration: none;
 }
 
-/* Main Navigation - CAA 스타일 적용 */
+/* Main Navigation - CAA 스타일 적용 (높이 고정) */
 .main-navigation {
   position: fixed;
-  top: 250px; /* 기본 위치 */
+  top: 250px; /* 모든 해상도에서 고정된 높이 */
   left: 300px; /* 기본 위치를 300px로 변경 */
   z-index: 40;
 }
@@ -86,7 +86,7 @@ body {
   position: absolute;
   top: 100%;
   left: 0;
-  margin-top: 15px;
+  margin-top: 45px; /* 15px * 3 = 45px로 변경 */
 }
 
 .footer-navigation ul {
@@ -110,10 +110,10 @@ body {
   color: #bb1c33;
 }
 
-/* 반응형 스타일링 */
+/* 반응형 스타일링 - 높이 고정 */
 @media (min-width: 1400px) {
   .main-navigation {
-    left: 350px; /* 큰 화면에서 위치 조정 */
+    left: 350px; /* 큰 화면에서 위치 조정 (수평만 변경) */
   }
   
   .main-navigation .main-menu-link {
@@ -123,45 +123,61 @@ body {
 
 @media (max-width: 1200px) {
   .main-navigation {
-    left: 250px; /* 작은 화면에서 위치 조정 */
-    top: 220px;
+    left: 250px; /* 작은 화면에서 위치 조정 (수평만 변경) */
+    /* top 값 제거 - 항상 250px로 고정 */
   }
   
   .main-navigation .main-menu-link {
     font-size: 2.56rem; /* 3.2rem * 0.8 = 2.56rem */
   }
+  
+  .footer-navigation {
+    margin-top: 40px;
+  }
 }
 
 @media (max-width: 992px) {
   .main-navigation {
-    left: 200px; /* 작은 화면에서 위치 조정 */
-    top: 200px;
+    left: 200px; /* 작은 화면에서 위치 조정 (수평만 변경) */
+    /* top 값 제거 - 항상 250px로 고정 */
   }
   
   .main-navigation .main-menu-link {
     font-size: 2.24rem; /* 2.8rem * 0.8 = 2.24rem */
   }
+  
+  .footer-navigation {
+    margin-top: 35px;
+  }
 }
 
 @media (max-width: 768px) {
   .main-navigation {
-    left: 150px; /* 작은 화면에서 위치 조정 */
-    top: 180px;
+    left: 150px; /* 작은 화면에서 위치 조정 (수평만 변경) */
+    /* top 값 제거 - 항상 250px로 고정 */
   }
   
   .main-navigation .main-menu-link {
     font-size: 1.92rem; /* 2.4rem * 0.8 = 1.92rem */
   }
+  
+  .footer-navigation {
+    margin-top: 30px;
+  }
 }
 
 @media (max-width: 576px) {
   .main-navigation {
-    left: 80px; /* 작은 화면에서 위치 조정 */
-    top: 150px;
+    left: 80px; /* 작은 화면에서 위치 조정 (수평만 변경) */
+    /* top 값 제거 - 항상 250px로 고정 */
   }
   
   .main-navigation .main-menu-link {
     font-size: 1.6rem; /* 2rem * 0.8 = 1.6rem */
+  }
+  
+  .footer-navigation {
+    margin-top: 25px;
   }
   
   .footer-navigation a {
