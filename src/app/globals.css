@@ -52,7 +52,7 @@ body {
 /* Main Navigation - CAA 스타일 적용 (반응형) */
 .main-navigation {
   position: fixed;
-  top: 200px;  /* 메뉴 위치를 화면 중앙에 가깝게 조정 */
+  top: 400px;  /* 메뉴 위치를 화면 중앙에 가깝게 조정 */
   left: 300px; /* 기본 위치를 300px로 유지 */
   z-index: 40;
   transform: none; /* 변환 방지 (!important 제거로 유연성 확보) */
