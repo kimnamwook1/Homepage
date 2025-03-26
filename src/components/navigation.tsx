@@ -23,6 +23,9 @@ const Navigation = ({ transparent = false }) => {
   const navClass = transparent
     ? `main-navigation ${isScrolled ? "white-bg" : ""}`
     : "main-navigation white-bg";
+    
+  // Text color based on transparency and scroll state
+  const textColor = transparent && !isScrolled ? "text-white" : "text-black";
 
   return (
     <nav className={navClass}>
@@ -40,32 +43,43 @@ const Navigation = ({ transparent = false }) => {
 
       <div className="desktop-menu hidden md:flex items-center space-x-8">
         <div className="dropdown relative">
-          <button className="font-medium text-sm hover:text-primary-caa-red">
-            For Talent
+          <button className={`font-medium text-sm ${textColor} hover:text-primary-caa-red`}>
+            For Consulting
           </button>
           <div className="dropdown-menu">
-            <Link href="/talent/entertainment">
-              <div className="px-4 py-2 hover:bg-gray-100">Entertainment</div>
+            <Link href="/consulting/services">
+              <div className="px-4 py-2 hover:bg-gray-100">Services</div>
             </Link>
-            <Link href="/talent/sports">
-              <div className="px-4 py-2 hover:bg-gray-100">Sports</div>
+            <Link href="/consulting/clients">
+              <div className="px-4 py-2 hover:bg-gray-100">Clients</div>
             </Link>
-            <Link href="/talent/music">
-              <div className="px-4 py-2 hover:bg-gray-100">Music</div>
+          </div>
+        </div>
+
+        <div className="dropdown relative">
+          <button className={`font-medium text-sm ${textColor} hover:text-primary-caa-red`}>
+            For MVAI
+          </button>
+          <div className="dropdown-menu">
+            <Link href="/mvai/portfolio">
+              <div className="px-4 py-2 hover:bg-gray-100">Portfolio</div>
+            </Link>
+            <Link href="/mvai/services">
+              <div className="px-4 py-2 hover:bg-gray-100">Services</div>
             </Link>
           </div>
         </div>
 
         <div className="dropdown relative">
           <button className="font-medium text-sm hover:text-primary-caa-red">
-            For Brands
+            For Unreal
           </button>
           <div className="dropdown-menu">
-            <Link href="/brands/consulting">
-              <div className="px-4 py-2 hover:bg-gray-100">Brand Consulting</div>
+            <Link href="/unreal/studio">
+              <div className="px-4 py-2 hover:bg-gray-100">Studio</div>
             </Link>
-            <Link href="/brands/partnerships">
-              <div className="px-4 py-2 hover:bg-gray-100">Partnerships</div>
+            <Link href="/unreal/services">
+              <div className="px-4 py-2 hover:bg-gray-100">Services</div>
             </Link>
           </div>
         </div>
@@ -105,11 +119,14 @@ const Navigation = ({ transparent = false }) => {
       {isMenuOpen && (
         <div className="mobile-menu absolute top-full left-0 right-0 bg-white shadow-md z-50 md:hidden">
           <div className="p-4">
-            <Link href="/talent" className="block py-2 font-medium">
-              For Talent
+            <Link href="/consulting" className="block py-2 font-medium">
+              For Consulting
             </Link>
-            <Link href="/brands" className="block py-2 font-medium">
-              For Brands
+            <Link href="/mvai" className="block py-2 font-medium">
+              For MVAI
+            </Link>
+            <Link href="/unreal" className="block py-2 font-medium">
+              For Unreal
             </Link>
             <Link href="/enterprise" className="block py-2 font-medium">
               For Enterprise
