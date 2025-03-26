@@ -71,10 +71,10 @@ const Navigation = ({ transparent = false, activePage = null }: NavigationProps)
         </div>
       </div>
 
-      {/* Left side vertical navigation - visible on desktop or when mobile menu is open */}
+      {/* Left side vertical navigation moved to center - visible on desktop or when mobile menu is open */}
       <div 
-        className={`fixed left-0 top-0 h-full bg-white border-r text-black pt-40 pl-10 pr-20 z-40 transform transition-transform duration-300 ${
-          isMenuOpen ? 'translate-x-0' : 'md:translate-x-0 -translate-x-full'
+        className={`fixed left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white py-10 px-16 shadow-xl border border-gray-200 rounded z-40 transition-opacity duration-300 ${
+          isMenuOpen ? 'opacity-100 visible' : 'opacity-100 visible'
         }`}
       >
         <div className="flex flex-col space-y-6">
@@ -117,10 +117,10 @@ const Navigation = ({ transparent = false, activePage = null }: NavigationProps)
         </div>
       </div>
 
-      {/* Backdrop for mobile menu */}
+      {/* Menu backdrop - only visible on mobile */}
       {isMenuOpen && (
         <div 
-          className="fixed inset-0 bg-black bg-opacity-50 z-30 md:hidden"
+          className="fixed inset-0 bg-black bg-opacity-50 z-30"
           onClick={() => setIsMenuOpen(false)}
         />
       )}
