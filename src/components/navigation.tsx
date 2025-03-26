@@ -25,12 +25,10 @@ const Navigation = ({ transparent = false, activePage = null }: NavigationProps)
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navClass = transparent
-    ? `fixed top-0 left-0 right-0 z-50 ${isScrolled ? "bg-white" : "bg-transparent"}`
-    : "fixed top-0 left-0 right-0 z-50 bg-white";
-    
-  // Text color based on transparency and scroll state
-  const textColor = transparent && !isScrolled ? "text-white" : "text-black";
+  const navClass = "fixed top-0 left-0 right-0 z-50 bg-white text-black";
+  
+  // Text color is now always black
+  const textColor = "text-black";
   
   // Only show the active page name in the top right for desktop
   const getActivePageName = () => {
@@ -50,13 +48,7 @@ const Navigation = ({ transparent = false, activePage = null }: NavigationProps)
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
-              <Image
-                src={transparent && !isScrolled ? "/images/thejpc-logo.svg" : "/images/thejpc-logo-dark.svg"}
-                alt="TheJPC Logo"
-                width={100}
-                height={40}
-                priority
-              />
+              <span className="text-xl font-semibold"><span className="font-bold">T</span>he <span className="font-bold">JPC</span></span>
             </Link>
           </div>
 
@@ -81,44 +73,44 @@ const Navigation = ({ transparent = false, activePage = null }: NavigationProps)
 
       {/* Left side vertical navigation - visible on desktop or when mobile menu is open */}
       <div 
-        className={`fixed left-0 top-0 h-full bg-dark-blue text-white pt-40 pl-10 pr-20 z-40 transform transition-transform duration-300 ${
+        className={`fixed left-0 top-0 h-full bg-white border-r text-black pt-40 pl-10 pr-20 z-40 transform transition-transform duration-300 ${
           isMenuOpen ? 'translate-x-0' : 'md:translate-x-0 -translate-x-full'
         }`}
       >
         <div className="flex flex-col space-y-6">
           <Link 
             href="/consulting" 
-            className={`font-medium text-xl hover:text-primary-caa-red ${activePage === 'consulting' ? 'text-primary-caa-red' : ''}`}
+            className={`font-medium text-xl hover:text-primary-caa-red ${activePage === 'consulting' ? 'text-primary-caa-red' : 'text-black'}`}
           >
             For Consulting
           </Link>
           <Link 
             href="/mvai" 
-            className={`font-medium text-xl hover:text-primary-caa-red ${activePage === 'mvai' ? 'text-primary-caa-red' : ''}`}
+            className={`font-medium text-xl hover:text-primary-caa-red ${activePage === 'mvai' ? 'text-primary-caa-red' : 'text-black'}`}
           >
             For MVAI
           </Link>
           <Link 
             href="/unreal" 
-            className={`font-medium text-xl hover:text-primary-caa-red ${activePage === 'unreal' ? 'text-primary-caa-red' : ''}`}
+            className={`font-medium text-xl hover:text-primary-caa-red ${activePage === 'unreal' ? 'text-primary-caa-red' : 'text-black'}`}
           >
             For Unreal
           </Link>
           <Link 
             href="/enterprise" 
-            className={`font-medium text-xl hover:text-primary-caa-red ${activePage === 'enterprise' ? 'text-primary-caa-red' : ''}`}
+            className={`font-medium text-xl hover:text-primary-caa-red ${activePage === 'enterprise' ? 'text-primary-caa-red' : 'text-black'}`}
           >
             For Enterprise
           </Link>
           
           <div className="mt-10 space-y-3">
-            <Link href="/about-us" className="font-medium text-base hover:text-primary-caa-red block">
+            <Link href="/about-us" className="font-medium text-base text-black hover:text-primary-caa-red block">
               About
             </Link>
-            <Link href="/careers" className="font-medium text-base hover:text-primary-caa-red block">
+            <Link href="/careers" className="font-medium text-base text-black hover:text-primary-caa-red block">
               Careers
             </Link>
-            <Link href="/contact" className="font-medium text-base hover:text-primary-caa-red block">
+            <Link href="/contact" className="font-medium text-base text-black hover:text-primary-caa-red block">
               Contact
             </Link>
           </div>

@@ -3,17 +3,11 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="bg-primary-caa-red text-white py-10">
+    <footer className="bg-white text-black py-10 border-t">
       <div className="container mx-auto px-4">
         <div className="mb-10">
           <Link href="/">
-            <Image
-              src="/images/thejpc-logo.svg"
-              alt="TheJPC Logo"
-              width={100}
-              height={40}
-              priority
-            />
+            <span className="text-xl font-semibold"><span className="font-bold">T</span>he <span className="font-bold">JPC</span></span>
           </Link>
         </div>
 

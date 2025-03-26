@@ -7,11 +7,9 @@ export default function Unreal() {
     <main className="min-h-screen flex flex-col">
       <Navigation transparent={false} activePage="unreal" />
 
-      {/* Full height hero section with red background */}
-      <section className="bg-primary-caa-red min-h-screen w-full flex items-center justify-center pt-20">
-        <div className="text-white text-4xl md:text-5xl font-medium text-center px-4">
-          We create opportunity.
-        </div>
+      {/* Full height section with white background */}
+      <section className="bg-white min-h-screen w-full flex items-center justify-center pt-20">
+        {/* Content will be added here */}
       </section>
 
       <Footer />
