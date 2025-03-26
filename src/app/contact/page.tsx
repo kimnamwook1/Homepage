@@ -30,7 +30,7 @@ export default function Contact() {
         <Hamburger />
 
         {/* Contact 제목 */}
-        <div className="container mx-auto px-8 pb-20">
+        <div className="container mx-auto px-8 pb-32 mt-auto">
           <h1 className="text-8xl md:text-[12rem] font-bold tracking-tighter">Contact</h1>
         </div>
       </section>
