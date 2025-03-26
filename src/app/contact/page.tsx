@@ -30,7 +30,7 @@ export default function Contact() {
         <Hamburger />
 
         {/* Contact 제목 */}
-        <div className="container mx-auto px-4 pt-24 md:pt-32">
+        <div className="container mx-auto px-4 pt-24 md:pt-32 pb-60 md:pb-80">
           <h1 className="text-8xl md:text-[12rem] font-bold tracking-tighter">Contact</h1>
         </div>
       </section>
@@ -41,13 +41,13 @@ export default function Contact() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* 좌측 섹션 */}
             <div className="md:pr-8">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Seoul</h2>
+              <h2 className="text-5xl md:text-8xl font-bold mb-6">Seoul</h2>
               <div className="h-1 w-16 bg-[#9B2335] mb-8"></div>
             </div>
 
             {/* 우측 섹션 - 서울 주소 */}
-            <div className="md:pl-8 md:mt-12">
-              <div className="space-y-2 text-lg md:mt-0 mt-8">
+            <div className="md:pl-8">
+              <div className="space-y-2 text-lg md:mt-6 mt-8">
                 <p>180, Bangbae-ro, Seocho-gu</p>
                 <p>Seoul, Republic of Korea 06586</p>
                 <p className="mt-4">E: jonathankim@thejpc.kr</p>
