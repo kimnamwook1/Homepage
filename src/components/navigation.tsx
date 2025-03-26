@@ -2,9 +2,10 @@ import Link from "next/link";
 
 type NavigationProps = {
   activePage?: string | null;
+  transparent?: boolean; // 추가: transparent 속성(실제로는 사용하지 않음)
 };
 
-const Navigation = ({ activePage = null }: NavigationProps) => {
+const Navigation = ({ activePage = null, transparent = false }: NavigationProps) => {
   return (
     <>
       {/* Logo */}
