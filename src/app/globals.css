@@ -31,10 +31,15 @@ body {
   position: absolute;
   top: 20px;
   left: 20px;
-  font-weight: bold;
-  font-size: 1.25rem;
-  color: black;
   text-decoration: none;
+  display: block;
+}
+
+/* 로고 이미지에 대한 스타일 */
+.logo img {
+  height: auto;
+  max-height: 48px;
+  width: auto;
 }
 
 /* Main Navigation - CAA 스타일 적용 (높이 고정) */
@@ -164,6 +169,11 @@ body {
   .footer-navigation {
     margin-top: 30px;
   }
+  
+  /* 모바일에서 로고 크기 조정 */
+  .logo img {
+    max-height: 40px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -182,5 +192,10 @@ body {
   
   .footer-navigation a {
     font-size: 0.96rem; /* 1.2rem * 0.8 = 0.96rem */
+  }
+  
+  /* 작은 모바일에서 로고 크기 조정 */
+  .logo img {
+    max-height: 32px;
   }
 }

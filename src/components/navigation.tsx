@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 type NavigationProps = {
   activePage?: string | null;
@@ -11,7 +12,13 @@ const Navigation = ({ activePage = null, transparent = false }: NavigationProps)
       {/* Logo */}
       <div className="header">
         <Link href="/" className="logo">
-          The JPC
+          <Image 
+            src="/images/TheJPC_logo_cropped.png" 
+            alt="The JPC Logo" 
+            width={120} 
+            height={48} 
+            priority
+          />
         </Link>
       </div>
 
