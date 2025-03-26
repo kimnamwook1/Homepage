@@ -37,12 +37,11 @@ body {
   text-decoration: none;
 }
 
-/* Main Navigation */
+/* Main Navigation - 절대 위치로 고정 */
 .main-navigation {
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-450px, calc(-50% - 60px)); /* Y축으로 60px 위로 이동 */
+  top: 250px; /* 절대 위치로 고정 */
+  left: 250px; /* 절대 위치로 고정 */
   z-index: 40;
 }
 
@@ -58,7 +57,7 @@ body {
 }
 
 .main-navigation .main-menu-link {
-  font-size: 3.5rem; /* 2.5rem * 1.4 = 3.5rem */
+  font-size: 3.5rem;
   font-weight: 600;
   color: black;
   text-decoration: none;
@@ -101,7 +100,7 @@ body {
 }
 
 .footer-navigation a {
-  font-size: 1.4rem; /* 1rem * 1.4 = 1.4rem */
+  font-size: 1.4rem;
   color: black;
   text-decoration: none;
   transition: color 0.3s;
@@ -114,11 +113,11 @@ body {
 /* Mobile Styles */
 @media (max-width: 768px) {
   .main-navigation {
+    top: 150px; /* 모바일에서의 위치 조정 */
     left: 30px;
-    transform: translateY(calc(-50% - 60px)); /* Y축으로 60px 위로 이동 */
   }
   
   .main-navigation .main-menu-link {
-    font-size: 2.8rem; /* 2rem * 1.4 = 2.8rem */
+    font-size: 2.8rem;
   }
 }
