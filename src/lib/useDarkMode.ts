@@ -7,16 +7,28 @@ export default function useDarkMode() {
   useEffect(() => {
     // 초기 다크모드 상태 감지
     if (typeof window !== 'undefined') {
-      setIsDarkMode(
-        window.matchMedia && 
-        window.matchMedia('(prefers-color-scheme: dark)').matches
-      );
+      const darkModeOn = window.matchMedia && 
+        window.matchMedia('(prefers-color-scheme: dark)').matches;
+      
+      setIsDarkMode(darkModeOn);
+      
+      // HTML 요소에 dark 클래스 추가/제거
+      if (darkModeOn) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
       
       // 다크모드 변경 감지 이벤트 리스너
       const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
       
       const handler = (e: MediaQueryListEvent) => {
         setIsDarkMode(e.matches);
+        if (e.matches) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
       };
       
       // 이벤트 리스너 추가 (최신 브라우저)
@@ -35,3 +47,4 @@ export default function useDarkMode() {
 
   return isDarkMode;
 }
+

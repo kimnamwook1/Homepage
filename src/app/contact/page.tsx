@@ -2,9 +2,15 @@
 import Header from "@/components/header";
 import Hamburger from "@/components/hamburger";
 import useDarkMode from "@/lib/useDarkMode";
+import { useEffect } from "react";
 
 export default function Contact() {
   const isDarkMode = useDarkMode();
+  
+  useEffect(() => {
+    // 테스트를 위해 강제 다크모드 적용
+    document.documentElement.classList.add('dark');
+  }, []);
   
   return (
     <main className="min-h-screen flex flex-col">

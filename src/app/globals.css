@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 다크 모드 스타일 - 직접 적용 */
+.dark {
+  @apply bg-black text-white;
+}
+
+.dark .section-title-box {
+  @apply bg-black text-white border-gray-800;
+}
+
+.dark .impact-statement {
+  @apply text-white;
+}
+
 /* 햄버거 메뉴 스타일 */
 .hamburger-menu {
   position: fixed;

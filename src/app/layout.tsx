@@ -14,8 +14,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={pfdintextpro.variable}>
+    <html lang="en" className="dark">
+      <body className={`${pfdintextpro.variable}`}>
         <MenuProvider>
           {children}
         </MenuProvider>
