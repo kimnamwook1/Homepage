@@ -130,8 +130,7 @@ const HamburgerButton: React.FC<{ toggleMenu: () => void; isOpen: boolean }> = (
 // 햄버거 메뉴 컨테이너
 export default function Hamburger() {
   const [isOpen, setIsOpen] = useState(false);
-  const isDarkMode = useDarkMode(); // 다크모드 상태 추가
-
+  
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };

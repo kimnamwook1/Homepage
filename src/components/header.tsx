@@ -50,7 +50,7 @@ export default function Header() {
     };
   }, [lastScrollY]);
   
-  // 스크롤 시 배경 추가
+  // 헤더 배경색 설정
   const headerBg = scrolled ? 'bg-white/90' : 'bg-transparent';
   
   return (
