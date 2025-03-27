@@ -137,7 +137,7 @@ html, body {
 .main-navigation {
   position: fixed;
   top: 400px;  /* 메뉴 위치를 화면 중앙에 가까게 조정 - 모바일과 동일 */
-  left: 374px; /* 호버 표시 위치까지 오른쪽으로 이동 */
+  left: 674px; /* 호버 표시 위치까지 오른쪽으로 이동 (300px 추가) */
   z-index: 40;
   transform: none; /* 변환 방지 (!important 제거로 유연성 확보) */
 }
@@ -321,7 +321,7 @@ html, body {
 /* 반응형 스타일링 - CAA 레퍼런스 사이트와 동일하게 설정 */
 @media (min-width: 1400px) {
   .main-navigation {
-    left: 374px;
+    left: 674px;
     top: 400px;
   }
   
@@ -336,7 +336,7 @@ html, body {
 
 @media (max-width: 1200px) {
   .main-navigation {
-    left: 374px;
+    left: 674px;
     top: 400px;
   }
   
@@ -351,7 +351,7 @@ html, body {
 
 @media (max-width: 992px) {
   .main-navigation {
-    left: 374px;
+    left: 674px;
     top: 400px;
   }
   
