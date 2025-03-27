@@ -27,26 +27,26 @@ export default function MVAI() {
           {/* 우측 컬럼 - 설명 텍스트 */}
           <div className="md:col-span-8">
             <div className="text-base md:text-lg text-black space-y-4">
-              <AnimatedText delay={300} className="block">
+              <AnimatedText delay={300}>
                 <p>The JPC's MVAI is an AI-powered music video generation solution designed to revolutionize the way artists visualize their music.</p>
               </AnimatedText>
               
-              <AnimatedText delay={400} className="block">
+              <AnimatedText delay={400}>
                 <p>By deeply analyzing songs through our proprietary AI model—trained on artist styles, lyrics, tempo, instrumentation, and emotional tone—we create tailored video production plans that truly reflect each artist's identity and creative intent.
                 Through the seamless integration of generative AI and our production expertise, MVAI produces high-quality, concept-driven music videos in a fraction of the time and cost of traditional production methods.</p>
               </AnimatedText>
               
-              <AnimatedText delay={500} className="block">
+              <AnimatedText delay={500}>
                 <p>This innovation enables artists, regardless of scale or budget, to turn their sound into stunning visuals—without compromise.
                 At the core of MVAI is <strong>The JPC's internalized AI framework</strong>, combining music intelligence, visual generation, and post-production automation.</p>
               </AnimatedText>
               
-              <AnimatedText delay={600} className="block">
+              <AnimatedText delay={600}>
                 <p>We believe that music video creation should no longer be a privilege for the few, but a powerful storytelling tool accessible to all artists.
                 MVAI is not just a product.</p>
               </AnimatedText>
               
-              <AnimatedText delay={700} className="block">
+              <AnimatedText delay={700}>
                 <p>It's a creative engine that empowers music to move, inspire, and reach further—visually, emotionally, and globally.</p>
               </AnimatedText>
             </div>

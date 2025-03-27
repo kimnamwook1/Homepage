@@ -54,8 +54,10 @@ export const AnimatedText: React.FC<{
   className?: string;
   delay?: number;
 }> = ({ children, className = '', delay = 0 }) => {
+  const { animateIn } = useAnimation();
+  
   return (
-    <div className={`animate-fade-up ${className}`} style={{ animationDelay: `${delay}ms` }}>
+    <div className={`animate-fade-up ${className} ${animateIn ? 'animate-in' : ''}`} style={{ animationDelay: `${delay}ms` }}>
       {children}
     </div>
   );
