@@ -45,9 +45,10 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ isOpen, toggleMenu }) => 
 
   return (
     <div 
-      className={`fixed top-0 right-0 w-full md:w-96 h-full bg-[#23272D] side-menu z-50 transition-transform duration-300 ease-in-out shadow-xl border-l border-gray-700 ${
+      className={`fixed top-0 right-0 w-full md:w-96 h-screen bg-[#23272D] side-menu z-50 transition-transform duration-300 ease-in-out shadow-xl border-l border-gray-700 ${
         isOpen ? 'translate-x-0' : 'translate-x-full'
       }`}
+      style={{backgroundColor: '#23272D'}}
     >
       <button 
         className="absolute top-4 right-4 md:top-8 md:right-8 text-white text-3xl z-50 w-10 h-10 flex items-center justify-center rounded-full bg-gray-700 hover:bg-gray-600"
@@ -57,7 +58,7 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ isOpen, toggleMenu }) => 
         ×
       </button>
 
-      <div className="p-12 pt-24 text-white w-full h-full bg-[#23272D]">
+      <div className="p-12 pt-24 text-white w-full h-full bg-[#23272D]" style={{backgroundColor: '#23272D', height: '100vh', overflow: 'auto'}}>
         <ul className="space-y-6">
           <li className="text-3xl font-semibold">
             <Link 

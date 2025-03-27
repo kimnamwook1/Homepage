@@ -30,6 +30,12 @@ body.overflow-hidden {
   background-color: #23272D !important;
   color: white !important;
   z-index: 9999 !important;
+  height: 100vh !important;
+}
+
+.side-menu > div {
+  background-color: #23272D !important;
+  min-height: 100vh !important;
 }
 
 .side-menu::before {
@@ -42,6 +48,7 @@ body.overflow-hidden {
   max-width: 24rem; /* 96 tailwind units */
   background-color: #23272D !important;
   z-index: -1;
+  height: 100vh;
 }
 
 /* 스크롤바 스타일 */
@@ -81,7 +88,7 @@ body.overflow-hidden {
   width: 100%;
   max-width: 400px;
   height: 100vh;
-  background-color: #23272D;
+  background-color: #23272D !important;
   z-index: 100;
   transform: translateX(100%);
   transition: transform 0.3s ease-in-out;
