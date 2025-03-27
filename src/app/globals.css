@@ -2,17 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-/* 다크 모드 스타일 - 직접 적용 */
-.dark {
-  @apply bg-black text-white;
+/* 스타일 - 항상 라이트 모드 */
+.section-title-box {
+  background-color: white;
+  color: black;
+  border-color: rgb(229, 231, 235);
 }
 
-.dark .section-title-box {
-  @apply bg-black text-white border-gray-800;
-}
-
-.dark .impact-statement {
-  @apply text-white;
+.impact-statement {
+  color: black;
 }
 
 /* 햄버거 메뉴 스타일 */
@@ -56,19 +54,6 @@
   transition: all 0.3s ease;
 }
 
-@media (prefers-color-scheme: dark) {
-  .hamburger-line {
-    background-color: #fff;
-  }
-}
-
-/* 다크모드에서의 작업중 텍스트 */
-@media (prefers-color-scheme: dark) {
-  .work-in-progress {
-    color: #fff;
-  }
-}
-
 /* Base Styles */
 html, body {
   height: 100%;
@@ -76,45 +61,10 @@ html, body {
   font-family: var(--font-pfdintextpro);
   margin: 0;
   padding: 0;
-}
-
-body {
   background-color: white;
   color: black;
   overflow-x: hidden;
 }
-
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #121212;
-    color: white;
-  }
-}
-
-/* Header 사용 중지 - 새로운 컴포넌트로 대체
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 20px;
-  z-index: 50;
-}
-
-.logo {
-  position: absolute;
-  top: 70px; 
-  left: 120px; 
-  text-decoration: none;
-  display: block;
-}
-
-.logo img {
-  height: auto;
-  max-height: 48px;
-  width: auto;
-}
-*/
 
 /* Main Navigation - CAA 스타일 적용 (반응형) */
 .main-navigation {
@@ -154,8 +104,6 @@ body {
   animation-delay: 300ms;
 }
 
-
-
 .main-navigation .footer-navigation {
   opacity: 0;
   transform: translateY(20px);
@@ -175,12 +123,6 @@ body {
   line-height: 1.2;
   display: block;
   padding: 0;
-}
-
-@media (prefers-color-scheme: dark) {
-  .main-navigation .main-menu-link {
-    color: white;
-  }
 }
 
 /* For로 시작하는 메뉴 항목에 수직 패딩 추가 */
@@ -205,12 +147,6 @@ body {
 /* 메뉴 클릭 모드 - 다른 메뉴에 호버 효과 없음 */
 .menu-clicked .main-menu-link:not(.active):hover {
   color: black; /* 호버해도 색상 변경 없음 */
-}
-
-@media (prefers-color-scheme: dark) {
-  .menu-clicked .main-menu-link:not(.active):hover {
-    color: white; /* 다크모드에서 호버 시 색상 */
-  }
 }
 
 /* Footer Navigation */
@@ -252,12 +188,6 @@ body {
   transition: color 0.3s;
 }
 
-@media (prefers-color-scheme: dark) {
-  .footer-navigation a {
-    color: white;
-  }
-}
-
 /* Footer 호버 상태 */
 .footer-navigation a:hover {
   color: #bb1c33;
@@ -271,12 +201,6 @@ body {
 /* 메뉴 클릭 모드 - 다른 메뉴에 호버 효과 없음 (푸터 포함) */
 .menu-clicked .footer-navigation a:not(.active):hover {
   color: black; /* 호버해도 색상 변경 없음 */
-}
-
-@media (prefers-color-scheme: dark) {
-  .menu-clicked .footer-navigation a:not(.active):hover {
-    color: white; /* 다크모드에서 호버 시 색상 */
-  }
 }
 
 /* 애니메이션 키프레임 정의 */
@@ -305,11 +229,6 @@ body {
   .footer-navigation {
     margin-top: 30px;
   }
-  
-  .logo {
-    top: 70px;
-    left: 150px; /* 화면이 클 때 로고 위치 조정 */
-  }
 }
 
 @media (max-width: 1200px) {
@@ -324,11 +243,6 @@ body {
   
   .footer-navigation {
     margin-top: 30px;
-  }
-  
-  .logo {
-    top: 70px;
-    left: 120px;
   }
 }
 
@@ -345,11 +259,6 @@ body {
   .footer-navigation {
     margin-top: 30px;
   }
-  
-  .logo {
-    top: 70px;
-    left: 70px; /* 화면이 작아질 때 로고 위치 조정 */
-  }
 }
 
 @media (max-width: 768px) {
@@ -364,16 +273,6 @@ body {
   
   .footer-navigation {
     margin-top: 30px;
-  }
-  
-  /* 모바일에서 로고 위치 및 크기 조정 */
-  .logo {
-    top: 40px;
-    left: 20px;
-  }
-  
-  .logo img {
-    max-height: 40px;
   }
 }
 
@@ -393,15 +292,5 @@ body {
   
   .footer-navigation a {
     font-size: 0.96rem; /* 1.2rem * 0.8 = 0.96rem */
-  }
-  
-  /* 작은 모바일에서 로고 위치 및 크기 조정 */
-  .logo {
-    top: 20px;
-    left: 20px;
-  }
-  
-  .logo img {
-    max-height: 32px;
   }
 }

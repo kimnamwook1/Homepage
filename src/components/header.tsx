@@ -3,20 +3,16 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import useDarkMode from "@/lib/useDarkMode";
 import { useMenu } from "@/lib/MenuContext";
 
 export default function Header() {
-  const isDarkMode = useDarkMode();
   const [scrolled, setScrolled] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [hidden, setHidden] = useState(false);
   const { setActivePage, setMenuActive } = useMenu();
   
-  // 모든 페이지에서 동일한 로고 사용
-  const logoSrc = isDarkMode 
-    ? "/images/TheJPC_logo_White.png" 
-    : "/images/TheJPC_logo_Blacked.png";
+  // 항상 라이트 모드로 고정
+  const logoSrc = "/images/TheJPC_logo_Blacked.png";
   
   useEffect(() => {
     const handleScroll = () => {
@@ -55,9 +51,7 @@ export default function Header() {
   }, [lastScrollY]);
   
   // 스크롤 시 배경 추가
-  const headerBg = scrolled 
-    ? (isDarkMode ? 'bg-[#121212]/90' : 'bg-white/90') 
-    : 'bg-transparent';
+  const headerBg = scrolled ? 'bg-white/90' : 'bg-transparent';
   
   return (
     <header 
@@ -65,7 +59,7 @@ export default function Header() {
         hidden ? '-translate-y-full' : 'translate-y-0'
       }`}
     >
-      <div className="fixed top-[40px] left-[120px] md:top-[50px] z-50">
+      <div className="fixed top-4 left-4 md:top-8 md:left-8 z-50">
         <Link 
           href="/" 
           onClick={() => {
@@ -79,7 +73,7 @@ export default function Header() {
             width={120} 
             height={48} 
             priority
-            className="w-[100px] md:w-[120px]"
+            className="w-[80px] md:w-[120px]"
           />
         </Link>
       </div>

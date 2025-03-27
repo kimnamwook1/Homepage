@@ -1,17 +1,8 @@
 "use client";
 import Header from "@/components/header";
 import Hamburger from "@/components/hamburger";
-import useDarkMode from "@/lib/useDarkMode";
-import { useEffect } from "react";
 
 export default function Contact() {
-  const isDarkMode = useDarkMode();
-  
-  useEffect(() => {
-    // 테스트를 위해 강제 다크모드 적용
-    document.documentElement.classList.add('dark');
-  }, []);
-  
   return (
     <main className="min-h-screen flex flex-col">
       {/* 상단 섹션 - Bordeaux 빨간색 배경 */}
@@ -29,7 +20,7 @@ export default function Contact() {
       </section>
 
       {/* 하단 콘텐츠 섹션 */}
-      <section className={`${isDarkMode ? 'bg-[#121212] text-white' : 'bg-black text-white'} h-[50vh] py-20`}>
+      <section className="bg-black text-white h-[50vh] py-20">
         <div className="container mx-auto px-8 pl-[13rem]">
           <div className="flex flex-col md:flex-row gap-8">
             {/* 좌측 섹션 */}
