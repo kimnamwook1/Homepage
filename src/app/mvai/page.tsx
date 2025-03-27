@@ -14,8 +14,8 @@ export default function MVAI() {
       {/* 중앙 콘텐츠 - 흰색 블록 전체 페이지 확장 */}
       <div className="container mx-auto px-4 md:px-8 pt-64 pb-16">
         {/* Section Title */}
-        <div className="section-title-box mb-12 py-2 px-4 rounded-md shadow-md border border-gray-200 bg-white">
-          <h2 className="text-2xl md:text-3xl font-semibold mb-0 text-black">Portfolio</h2>
+        <div className="mb-12 py-2 px-0">
+          <h2 className="text-2xl md:text-3xl font-semibold mb-0 text-black border-b border-gray-300 pb-2">Portfolio</h2>
         </div>
         
         {/* Impact Statement와 Description Text */}
