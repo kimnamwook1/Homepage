@@ -2,6 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 사이드 메뉴 관련 스타일 */
+body.overflow-hidden {
+  overflow: hidden;
+}
+
+/* 스크롤바 스타일 */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 /* 스타일 - 항상 라이트 모드 */
 .section-title-box {
   background-color: white;

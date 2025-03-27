@@ -19,10 +19,14 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ isOpen, toggleMenu }) => 
   useEffect(() => {
     if (isOpen) {
       setIsVisible(true);
+      // 메뉴가 열릴 때 body 스크롤 막기
+      document.body.style.overflow = 'hidden';
     } else {
       // 슬라이드 아웃 애니메이션 후 완전히 숨김
       const timer = setTimeout(() => {
         setIsVisible(false);
+        // 메뉴가 닫힐 때 body 스크롤 복원
+        document.body.style.overflow = '';
       }, 300);
       return () => clearTimeout(timer);
     }
@@ -116,7 +120,7 @@ const HamburgerButton: React.FC<{ toggleMenu: () => void; isOpen: boolean }> = (
   
   return (
     <button 
-      className="absolute top-4 right-4 md:top-6 md:right-8 z-50 flex flex-col justify-center items-center w-10 h-10 p-2 rounded-md bg-gray-200/80 backdrop-blur-sm"
+      className={`absolute top-4 right-4 md:top-6 md:right-8 z-50 flex flex-col justify-center items-center w-10 h-10 p-2 rounded-md bg-gray-200/80 backdrop-blur-sm transition-transform duration-300 ${isOpen ? 'md:translate-x-[-384px]' : ''}`}
       onClick={toggleMenu}
       aria-label={isOpen ? "Close menu" : "Open menu"}
     >
@@ -128,12 +132,40 @@ const HamburgerButton: React.FC<{ toggleMenu: () => void; isOpen: boolean }> = (
 };
 
 // 햄버거 메뉴 컨테이너
-export default function Hamburger() {
-  const [isOpen, setIsOpen] = useState(false);
+type HamburgerProps = {
+  isOpen?: boolean;
+  setIsOpen?: (isOpen: boolean) => void;
+};
+
+export default function Hamburger({ isOpen: externalIsOpen, setIsOpen: externalSetIsOpen }: HamburgerProps = {}) {
+  // 외부에서 받은 상태가 없으면 내부 상태 사용
+  const [internalIsOpen, setInternalIsOpen] = useState(false);
+  
+  // 외부 상태가 있는지 여부
+  const hasExternalState = externalIsOpen !== undefined && externalSetIsOpen !== undefined;
+  
+  // 사용할 상태와 설정 함수
+  const isOpen = hasExternalState ? externalIsOpen : internalIsOpen;
+  const setIsOpen = hasExternalState ? externalSetIsOpen : setInternalIsOpen;
   
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
+  // ESC 키를 눌렀을 때 메뉴 닫기
+  useEffect(() => {
+    const handleEsc = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && isOpen) {
+        toggleMenu();
+      }
+    };
+    
+    window.addEventListener('keydown', handleEsc);
+    
+    return () => {
+      window.removeEventListener('keydown', handleEsc);
+    };
+  }, [isOpen]);
 
   return (
     <>
