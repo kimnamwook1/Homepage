@@ -136,10 +136,10 @@ html, body {
 /* Main Navigation - CAA 스타일 적용 (반응형) */
 .main-navigation {
   position: fixed;
-  top: 400px; /* 메뉴 위치를 화면 중앙에 가까게 조정 */
-  left: calc(50% - 600px); /* 화면 중앙에서 왼쪽으로 600px 이동 (400px 추가) */
+  top: 400px;
+  left: 180px; /* 로고 근처에서 시작하여 고정 값 사용 */
   z-index: 40;
-  transform: none; /* 변환 방지 */
+  transform: none;
 }
 
 .main-navigation ul {
@@ -321,7 +321,7 @@ html, body {
 /* 반응형 스타일링 - 화면 크기에 따른 상대적 위치 조정 */
 @media (min-width: 1400px) {
   .main-navigation {
-    left: calc(50% - 600px); /* 큰 화면에서 중앙에서 왼쪽으로 600px */
+    left: 180px; /* 큰 화면에서도 로고 근처 시작 */
     top: 400px;
   }
   
@@ -336,7 +336,7 @@ html, body {
 
 @media (max-width: 1200px) {
   .main-navigation {
-    left: calc(50% - 570px); /* 중간 화면에서 중앙에서 왼쪽으로 570px */
+    left: 180px; /* 중간 화면에서도 로고 근처 시작 */
     top: 400px;
   }
   
@@ -351,7 +351,7 @@ html, body {
 
 @media (max-width: 992px) {
   .main-navigation {
-    left: calc(50% - 550px); /* 작은 PC 화면에서 중앙에서 왼쪽으로 550px */
+    left: 180px; /* 작은 PC 화면에서도 로고 근처 시작 */
     top: 400px;
   }
   
