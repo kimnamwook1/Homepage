@@ -36,6 +36,31 @@ export default function MVAI() {
           <h2 className="text-2xl md:text-3xl font-semibold mb-0 text-black dark:text-white">Portfolio</h2>
         </div>
         
+        {/* 영상 3개를 위한 영역 */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-16">
+          {/* 첫 번째 영상 영역 */}
+          <div className="relative w-full pb-[56.25%] bg-gray-200 dark:bg-gray-700 rounded-md overflow-hidden">
+            <div className="absolute inset-0 flex items-center justify-center">
+              <span className="text-gray-500 dark:text-gray-400">영상 (링크) 삽입 영역 1</span>
+            </div>
+          </div>
+          
+          {/* 두 번째 영상 영역 */}
+          <div className="relative w-full pb-[56.25%] bg-gray-200 dark:bg-gray-700 rounded-md overflow-hidden">
+            <div className="absolute inset-0 flex items-center justify-center">
+              <span className="text-gray-500 dark:text-gray-400">영상 (링크) 삽입 영역 2</span>
+            </div>
+          </div>
+          
+          {/* 세 번째 영상 영역 */}
+          <div className="relative w-full pb-[56.25%] bg-gray-200 dark:bg-gray-700 rounded-md overflow-hidden">
+            <div className="absolute inset-0 flex items-center justify-center">
+              <span className="text-gray-500 dark:text-gray-400">영상 (링크) 삽입 영역 3</span>
+            </div>
+          </div>
+        </div>
+        
+        {/* Impact Statement와 Description Text */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16">
           {/* 좌측 컬럼 - 임팩트 문구 */}
           <div className="md:col-span-4">
