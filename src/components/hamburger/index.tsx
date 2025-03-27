@@ -45,19 +45,19 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ isOpen, toggleMenu }) => 
 
   return (
     <div 
-      className={`fixed top-0 right-0 w-full md:w-96 h-full bg-[#23272D] side-menu z-40 transition-transform duration-300 ease-in-out ${
+      className={`fixed top-0 right-0 w-full md:w-96 h-full bg-[#23272D] side-menu z-50 transition-transform duration-300 ease-in-out ${
         isOpen ? 'translate-x-0' : 'translate-x-full'
       }`}
     >
       <button 
-        className="absolute top-4 right-4 md:top-8 md:right-8 text-white text-3xl"
+        className="absolute top-4 right-4 md:top-8 md:right-8 text-white text-3xl z-50 w-10 h-10 flex items-center justify-center rounded-full bg-gray-700 hover:bg-gray-600"
         onClick={toggleMenu}
         aria-label="Close menu"
       >
         ×
       </button>
 
-      <div className="p-12 pt-24 text-white">
+      <div className="p-12 pt-24 text-white w-full h-full bg-[#23272D]">
         <ul className="space-y-6">
           <li className="text-3xl font-semibold">
             <Link 
@@ -120,7 +120,7 @@ const HamburgerButton: React.FC<{ toggleMenu: () => void; isOpen: boolean }> = (
   
   return (
     <button 
-      className="absolute top-4 right-4 md:top-6 md:right-8 z-50 flex flex-col justify-center items-center w-10 h-10 p-2 rounded-md bg-gray-200/80 backdrop-blur-sm"
+      className="absolute top-4 right-4 md:top-6 md:right-8 z-[60] flex flex-col justify-center items-center w-10 h-10 p-2 rounded-md bg-gray-200/80 backdrop-blur-sm"
       onClick={toggleMenu}
       aria-label={isOpen ? "Close menu" : "Open menu"}
     >
@@ -161,6 +161,15 @@ export default function Hamburger({ isOpen: externalIsOpen, setIsOpen: externalS
     };
     
     window.addEventListener('keydown', handleEsc);
+    
+    // 배경 스크롤 제어
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+      document.body.classList.add('has-menu-open');
+    } else {
+      document.body.style.overflow = '';
+      document.body.classList.remove('has-menu-open');
+    }
     
     return () => {
       window.removeEventListener('keydown', handleEsc);
