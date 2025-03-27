@@ -137,7 +137,7 @@ html, body {
 .main-navigation {
   position: fixed;
   top: 400px;  /* 메뉴 위치를 화면 중앙에 가까게 조정 */
-  left: 205px; /* 녹색 선에 맞춰 조정 */
+  left: 106px; /* 파란색 세로선에 맞춰 조정 */
   z-index: 40;
   transform: none; /* 변환 방지 (!important 제거로 유연성 확보) */
 }
@@ -321,7 +321,7 @@ html, body {
 /* 반응형 스타일링 - CAA 레퍼런스 사이트와 동일하게 설정 */
 @media (min-width: 1400px) {
   .main-navigation {
-    left: 205px;
+    left: 106px;
     top: 400px;
   }
   
@@ -336,7 +336,7 @@ html, body {
 
 @media (max-width: 1200px) {
   .main-navigation {
-    left: 205px;
+    left: 106px;
     top: 400px;
   }
   
@@ -351,7 +351,7 @@ html, body {
 
 @media (max-width: 992px) {
   .main-navigation {
-    left: 205px;
+    left: 106px;
     top: 400px;
   }
   
