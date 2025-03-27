@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import useDarkMode from '@/lib/useDarkMode';
 import { useMenu } from '@/lib/MenuContext';
 
 type HamburgerMenuProps = {
@@ -112,15 +113,18 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ isOpen, toggleMenu }) => 
 
 // 햄버거 아이콘 버튼 컴포넌트
 const HamburgerButton: React.FC<{ toggleMenu: () => void; isOpen: boolean }> = ({ toggleMenu, isOpen }) => {
+  const isDarkMode = useDarkMode();
+  const lineColor = isDarkMode ? 'bg-white' : 'bg-black';
+  
   return (
     <button 
       className="fixed top-8 right-8 z-50 flex flex-col justify-center items-center w-10 h-10"
       onClick={toggleMenu}
       aria-label={isOpen ? "Close menu" : "Open menu"}
     >
-      <span className={`block w-6 h-0.5 bg-black dark:bg-white transition-transform duration-300 ${isOpen ? 'rotate-45 translate-y-1' : ''}`}></span>
-      <span className={`block w-6 h-0.5 bg-black dark:bg-white mt-1.5 transition-opacity duration-300 ${isOpen ? 'opacity-0' : ''}`}></span>
-      <span className={`block w-6 h-0.5 bg-black dark:bg-white mt-1.5 transition-transform duration-300 ${isOpen ? '-rotate-45 -translate-y-1' : ''}`}></span>
+      <span className={`block w-6 h-0.5 ${lineColor} transition-transform duration-300 ${isOpen ? 'rotate-45 translate-y-1' : ''}`}></span>
+      <span className={`block w-6 h-0.5 ${lineColor} mt-1.5 transition-opacity duration-300 ${isOpen ? 'opacity-0' : ''}`}></span>
+      <span className={`block w-6 h-0.5 ${lineColor} mt-1.5 transition-transform duration-300 ${isOpen ? '-rotate-45 -translate-y-1' : ''}`}></span>
     </button>
   );
 };
@@ -128,6 +132,7 @@ const HamburgerButton: React.FC<{ toggleMenu: () => void; isOpen: boolean }> = (
 // 햄버거 메뉴 컨테이너
 export default function Hamburger() {
   const [isOpen, setIsOpen] = useState(false);
+  const isDarkMode = useDarkMode(); // 다크모드 상태 추가
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
