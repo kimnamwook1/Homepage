@@ -23,7 +23,7 @@ export default function Contact() {
             <div className="space-y-2 text-lg text-black">
               <p>180, Bangbae-ro, Seocho-gu</p>
               <p>Seoul, Republic of Korea 06586</p>
-              <p className="mt-4">E: jonathankim@thejpc.kr</p>
+              <p className="mt-4">E: <a href="mailto:jonathankim@thejpc.kr" className="underline hover:text-[#bb1c33] transition-colors">jonathankim@thejpc.kr</a></p>
             </div>
           </div>
           
