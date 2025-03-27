@@ -277,7 +277,7 @@ html, body {
 }
 
 .animate-in .animate-fade-up {
-  animation: fadeInUp 0.5s ease forwards;
+  animation: fadeInUp 0.5s ease forwards; /* forwards 속성이 애니메이션 완료 후 상태 유지 */
 }
 
 /* 지연 시간 클래스 */
