@@ -116,14 +116,14 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ isOpen, toggleMenu }) => 
 };
 
 // 햄버거 아이콘 버튼 컴포넌트
-const HamburgerButton: React.FC<{ toggleMenu: () => void; isOpen: boolean }> = ({ toggleMenu, isOpen }) => {
-  const lineColor = 'bg-black'; // 항상 검은색으로 설정
+const HamburgerButton: React.FC<{ toggleMenu: () => void; isOpen: boolean; isTransparent: boolean }> = ({ toggleMenu, isOpen, isTransparent }) => {
+  const lineColor = isTransparent ? 'bg-white' : 'bg-black'; // 투명 옵션에 따라 색상 설정
   
   if (isOpen) return null; // 메뉴가 열리면 햄버거 버튼 숨김
   
   return (
     <button 
-      className="absolute top-2 right-4 md:top-6 md:right-8 z-[60] flex flex-col justify-center items-center w-10 h-10 p-2 bg-white"
+      className="absolute top-2 right-4 md:top-6 md:right-8 z-[60] flex flex-col justify-center items-center w-10 h-10 p-2 bg-transparent"
       onClick={toggleMenu}
       aria-label={isOpen ? "Close menu" : "Open menu"}
     >
@@ -138,9 +138,10 @@ const HamburgerButton: React.FC<{ toggleMenu: () => void; isOpen: boolean }> = (
 type HamburgerProps = {
   isOpen?: boolean;
   setIsOpen?: (isOpen: boolean) => void;
+  isTransparent?: boolean;
 };
 
-export default function Hamburger({ isOpen: externalIsOpen, setIsOpen: externalSetIsOpen }: HamburgerProps = {}) {
+export default function Hamburger({ isOpen: externalIsOpen, setIsOpen: externalSetIsOpen, isTransparent = false }: HamburgerProps = {}) {
   // 외부에서 받은 상태가 없으면 내부 상태 사용
   const [internalIsOpen, setInternalIsOpen] = useState(false);
   
@@ -181,7 +182,7 @@ export default function Hamburger({ isOpen: externalIsOpen, setIsOpen: externalS
 
   return (
     <>
-      <HamburgerButton toggleMenu={toggleMenu} isOpen={isOpen} />
+      <HamburgerButton toggleMenu={toggleMenu} isOpen={isOpen} isTransparent={isTransparent} />
       <HamburgerMenu isOpen={isOpen} toggleMenu={toggleMenu} />
     </>
   );

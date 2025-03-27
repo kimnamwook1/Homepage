@@ -6,7 +6,7 @@ import { useEffect, useState, useRef } from "react";
 import { useMenu } from "@/lib/MenuContext";
 import Hamburger from "./hamburger";
 
-export default function Header() {
+export default function Header({ transparent = false }: { transparent?: boolean }) {
   const [scrolled, setScrolled] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [hidden, setHidden] = useState(false);
@@ -14,8 +14,8 @@ export default function Header() {
   const headerRef = useRef<HTMLElement>(null);
   const { setActivePage, setMenuActive } = useMenu();
   
-  // 항상 라이트 모드로 고정
-  const logoSrc = "/images/TheJPC_logo_Blacked.png";
+  // 투명 여부에 따라 로고 색상 설정
+  const logoSrc = transparent ? "/images/TheJPC_logo_White.png" : "/images/TheJPC_logo_Blacked.png";
   
   useEffect(() => {
     const handleScroll = () => {
@@ -58,13 +58,14 @@ export default function Header() {
     setMenuOpen(!menuOpen);
   };
 
-  // 헤더 배경색 항상 흰색으로 설정
-  const headerBg = 'bg-white';
+  // 헤더 배경색 설정 - transparent 옵션에 따라 투명 또는 흰색으로 설정
+  const headerBg = transparent ? '' : 'bg-white';
+  const headerShadow = transparent ? '' : 'shadow-sm';
   
   return (
     <header 
       ref={headerRef}
-      className={`fixed top-0 left-0 w-full z-40 transition-all duration-300 ${headerBg} shadow-sm ${
+      className={`fixed top-0 left-0 w-full z-40 transition-all duration-300 ${headerBg} ${headerShadow} ${
         hidden ? '-translate-y-full' : 'translate-y-0'
       }`}
     >
@@ -89,7 +90,7 @@ export default function Header() {
         </div>
         
         {/* 햄버거 메뉴 버튼 */}
-        <Hamburger isOpen={menuOpen} setIsOpen={setMenuOpen} />
+        <Hamburger isOpen={menuOpen} setIsOpen={setMenuOpen} isTransparent={transparent} />
       </div>
     </header>
   );

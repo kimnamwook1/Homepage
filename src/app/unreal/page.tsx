@@ -11,8 +11,8 @@ export default function Unreal() {
   };
   return (
     <main className="min-h-screen flex flex-col" style={backgroundStyle}>
-      {/* 헤더 */}
-      <Header />
+      {/* 헤더 - 투명한 옵션 적용 */}
+      <Header transparent={true} />
 
       {/* 중앙 콘텐츠 - 흰색 블록 전체 페이지 확장 */}
       <div className="container mx-auto px-4 md:px-8 pt-64 pb-16 relative z-10">
