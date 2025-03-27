@@ -51,12 +51,11 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ isOpen, toggleMenu }) => 
       style={{backgroundColor: '#23272D'}}
     >
       <button 
-        className="absolute top-4 right-4 md:top-8 md:right-8 text-white font-bold z-50 w-10 h-10 flex items-center justify-center rounded-full bg-gray-700 hover:bg-gray-600"
+        className="absolute top-4 right-4 md:top-6 md:right-8 text-white font-bold z-50 w-10 h-10 flex items-center justify-center rounded-full bg-gray-700 hover:bg-gray-600 transition-all"
         onClick={toggleMenu}
         aria-label="Close menu"
-        style={{fontSize: '16px'}}
       >
-        X
+        <span className="text-lg leading-none" style={{marginTop: '-2px'}}>×</span>
       </button>
 
       <div className="p-12 pt-24 text-white w-full h-full bg-[#23272D]" style={{backgroundColor: '#23272D', height: '100vh', overflow: 'auto'}}>
@@ -119,6 +118,8 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ isOpen, toggleMenu }) => 
 // 햄버거 아이콘 버튼 컴포넌트
 const HamburgerButton: React.FC<{ toggleMenu: () => void; isOpen: boolean }> = ({ toggleMenu, isOpen }) => {
   const lineColor = 'bg-black'; // 항상 검은색으로 설정
+  
+  if (isOpen) return null; // 메뉴가 열리면 햄버거 버튼 숨김
   
   return (
     <button 
