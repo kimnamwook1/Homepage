@@ -136,10 +136,10 @@ html, body {
 /* Main Navigation - CAA 스타일 적용 (반응형) */
 .main-navigation {
   position: fixed;
-  top: 400px;  /* 메뉴 위치를 화면 중앙에 가까게 조정 - 모바일과 동일 */
-  left: 500px; /* 기본값 조정 - 작은 화면에서도 적절히 보이도록 */
+  top: 400px; /* 메뉴 위치를 화면 중앙에 가까게 조정 */
+  left: calc(50% - 200px); /* 화면 중앙에서 왼쪽으로 200px 이동 */
   z-index: 40;
-  transform: none; /* 변환 방지 (!important 제거로 유연성 확보) */
+  transform: none; /* 변환 방지 */
 }
 
 .main-navigation ul {
@@ -318,10 +318,10 @@ html, body {
 }
 
 
-/* 반응형 스타일링 - CAA 레퍼런스 사이트와 동일하게 설정 */
+/* 반응형 스타일링 - 화면 크기에 따른 상대적 위치 조정 */
 @media (min-width: 1400px) {
   .main-navigation {
-    left: 674px; /* 큰 화면에서는 300px 이동 */
+    left: calc(50% - 200px); /* 큰 화면에서 중앙에서 왼쪽으로 200px */
     top: 400px;
   }
   
@@ -336,7 +336,7 @@ html, body {
 
 @media (max-width: 1200px) {
   .main-navigation {
-    left: 574px; /* 1200px 화면에서는 200px 이동 */
+    left: calc(50% - 170px); /* 중간 화면에서 중앙에서 왼쪽으로 170px */
     top: 400px;
   }
   
@@ -351,7 +351,7 @@ html, body {
 
 @media (max-width: 992px) {
   .main-navigation {
-    left: 474px; /* 992px 화면에서는 100px 이동 */
+    left: calc(50% - 150px); /* 작은 PC 화면에서 중앙에서 왼쪽으로 150px */
     top: 400px;
   }
   
