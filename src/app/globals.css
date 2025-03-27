@@ -78,7 +78,7 @@ body {
   }
 }
 
-/* Header */
+/* Header 사용 중지 - 새로운 컴포넌트로 대체
 .header {
   position: fixed;
   top: 0;
@@ -90,18 +90,18 @@ body {
 
 .logo {
   position: absolute;
-  top: 70px; /* 220px에서 150px 올림: 220 - 150 = 70 */
-  left: 120px; /* 220px에서 100px 좌측으로 이동: 220 - 100 = 120 */
+  top: 70px; 
+  left: 120px; 
   text-decoration: none;
   display: block;
 }
 
-/* 로고 이미지에 대한 스타일 */
 .logo img {
   height: auto;
   max-height: 48px;
   width: auto;
 }
+*/
 
 /* Main Navigation - CAA 스타일 적용 (반응형) */
 .main-navigation {

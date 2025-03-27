@@ -1,6 +1,5 @@
 "use client";
-import Image from "next/image";
-import Link from "next/link";
+import Header from "@/components/header";
 import Hamburger from "@/components/hamburger";
 import useDarkMode from "@/lib/useDarkMode";
 
@@ -14,18 +13,8 @@ export default function AboutUs() {
   
   return (
     <main className={`min-h-screen flex flex-col ${isDarkMode ? 'bg-[#121212]' : 'bg-white'}`}>
-      {/* 로고 */}
-      <div className="header">
-        <Link href="/" className="logo">
-          <Image 
-            src={logoSrc}
-            alt="The JPC Logo" 
-            width={120} 
-            height={48} 
-            priority
-          />
-        </Link>
-      </div>
+      {/* 헤더 */}
+      <Header />
 
       {/* 햄버거 메뉴 */}
       <Hamburger />

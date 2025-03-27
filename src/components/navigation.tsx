@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
+import Header from "./header";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { useMenu } from "@/lib/MenuContext";
@@ -75,20 +75,7 @@ const Navigation = ({ transparent = false }: NavigationProps) => {
   return (
     <>
       {/* Logo */}
-      <div className="header">
-        <Link href="/" className="logo" onClick={() => {
-          setActivePage(null);
-          setMenuActive(false);
-        }}>
-          <Image 
-            src={logoSrc}
-            alt="The JPC Logo" 
-            width={120} 
-            height={48} 
-            priority
-          />
-        </Link>
-      </div>
+      <Header />
 
       {/* Main navigation - 메뉴 클릭 시 menu-clicked 클래스와 애니메이션 클래스 추가 */}
       <nav className={`main-navigation ${menuActive ? 'menu-clicked' : ''} ${animateIn ? 'animate-in' : ''}`}>
