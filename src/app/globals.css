@@ -136,8 +136,8 @@ html, body {
 /* Main Navigation - CAA 스타일 적용 (반응형) */
 .main-navigation {
   position: fixed;
-  top: 240px;  /* 메뉴 위치를 조정 */
-  left: 375px; /* 로고의 좌측과 동일한 수직선상에 정렬 */
+  top: 400px;  /* 메뉴 위치를 화면 중앙에 가까게 조정 - 모바일과 동일 */
+  left: 230px; /* 로고의 좌측과 동일한 수직선상에 정렬 - 정확히 조정 */
   z-index: 40;
   transform: none; /* 변환 방지 (!important 제거로 유연성 확보) */
 }
@@ -321,8 +321,8 @@ html, body {
 /* 반응형 스타일링 - CAA 레퍼런스 사이트와 동일하게 설정 */
 @media (min-width: 1400px) {
   .main-navigation {
-    left: 375px;
-    top: 240px;
+    left: 230px;
+    top: 400px;
   }
   
   .main-navigation .main-menu-link {
@@ -336,8 +336,8 @@ html, body {
 
 @media (max-width: 1200px) {
   .main-navigation {
-    left: 375px;
-    top: 240px;
+    left: 230px;
+    top: 400px;
   }
   
   .main-navigation .main-menu-link {
@@ -351,8 +351,8 @@ html, body {
 
 @media (max-width: 992px) {
   .main-navigation {
-    left: 375px;
-    top: 240px;
+    left: 230px;
+    top: 400px;
   }
   
   .main-navigation .main-menu-link {
