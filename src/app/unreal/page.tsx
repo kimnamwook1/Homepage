@@ -36,7 +36,7 @@ export default function Unreal() {
           <h2 className="text-2xl md:text-3xl font-semibold mb-0 text-black dark:text-white">Studio</h2>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 mb-16">
           {/* 좌측 컬럼 - 임팩트 문구 */}
           <div className="md:col-span-4">
             <h3 className={`text-2xl md:text-4xl lg:text-5xl font-bold text-black dark:text-white leading-tight mb-6`}>
@@ -48,11 +48,23 @@ export default function Unreal() {
             </h3>
           </div>
           
-          {/* 우측 컬럼 - 설명 텍스트 */}
-          <div className="md:col-span-7">
-            <p className={`text-base md:text-lg ${isDarkMode ? 'text-white' : 'text-black'}`}>
-              (Example) Our Unreal Engine services harness the power of one of the world's most advanced real-time 3D creation tools to deliver stunning visual experiences across multiple platforms and industries. With photorealistic rendering capabilities and unmatched flexibility, we create immersive environments that captivate audiences and push the boundaries of digital content creation. Our team of skilled developers and artists leverages Unreal Engine's extensive toolset to create everything from interactive architectural visualizations and product configurators to cutting-edge virtual production setups and immersive training simulations. We combine technical expertise with creative vision to bring your ideas to life with unprecedented visual fidelity. We specialize in optimizing Unreal Engine projects for performance across a wide range of hardware, ensuring smooth experiences on everything from high-end workstations to mobile devices. Our technical pipeline incorporates the latest advancements in real-time rendering, physics simulation, and animation to create dynamic, responsive environments. Whether you're looking to create interactive marketing experiences, virtual sets for film and television, or immersive gameplay environments, our Unreal Engine services provide the expertise and creative vision needed to exceed expectations and deliver compelling visual experiences that stand out in today's digital landscape.
-            </p>
+          {/* 우측 컬럼 - 영상 2개 */}
+          <div className="md:col-span-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {/* 첫 번째 영상 영역 */}
+              <div className="relative w-full pb-[56.25%] bg-gray-200 dark:bg-gray-700 rounded-md overflow-hidden">
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <span className="text-gray-500 dark:text-gray-400">영상 (링크) 삽입 영역</span>
+                </div>
+              </div>
+              
+              {/* 두 번째 영상 영역 */}
+              <div className="relative w-full pb-[56.25%] bg-gray-200 dark:bg-gray-700 rounded-md overflow-hidden">
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <span className="text-gray-500 dark:text-gray-400">영상 (링크) 삽입 영역</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
