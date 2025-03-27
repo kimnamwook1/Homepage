@@ -137,7 +137,7 @@ html, body {
 .main-navigation {
   position: fixed;
   top: 400px;
-  left: 18%; /* 이전 값과 현재 값의 중간값으로 조정 */
+  left: 23%; /* 중간 정도의 값으로 업데이트 */
   z-index: 40;
   transform: none;
 }
