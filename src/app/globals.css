@@ -136,7 +136,7 @@ html, body {
 /* Main Navigation - CAA 스타일 적용 (반응형) */
 .main-navigation {
   position: fixed;
-  top: 400px;  /* 메뉴 위치를 화면 중앙에 가깝게 조정 */
+  top: 100px;  /* PC에서 로고와 같은 세로 위치에 오도록 조정 */
   left: 300px; /* 기본 위치를 300px로 유지 */
   z-index: 40;
   transform: none; /* 변환 방지 (!important 제거로 유연성 확보) */
@@ -322,7 +322,7 @@ html, body {
 @media (min-width: 1400px) {
   .main-navigation {
     left: 350px;
-    top: 400px;
+    top: 100px; /* PC에서 로고와 같은 세로 위치 유지 */
   }
   
   .main-navigation .main-menu-link {
@@ -337,7 +337,7 @@ html, body {
 @media (max-width: 1200px) {
   .main-navigation {
     left: 250px;
-    top: 400px;
+    top: 100px; /* PC에서 로고와 같은 세로 위치 유지 */
   }
   
   .main-navigation .main-menu-link {
@@ -352,7 +352,7 @@ html, body {
 @media (max-width: 992px) {
   .main-navigation {
     left: 200px;
-    top: 400px;
+    top: 100px; /* PC에서 로고와 같은 세로 위치 유지 */
   }
   
   .main-navigation .main-menu-link {
@@ -367,7 +367,7 @@ html, body {
 @media (max-width: 768px) {
   .main-navigation {
     left: 150px;
-    top: 380px; /* 모바일에서는 상단으로부터 약간 더 가깝게 하되 200px 추가 */
+    top: 380px; /* 모바일에서는 기존 위치 유지 */
   }
   
   .main-navigation .main-menu-link {
@@ -382,7 +382,7 @@ html, body {
 @media (max-width: 576px) {
   .main-navigation {
     left: 80px;
-    top: 380px;
+    top: 380px; /* 모바일에서는 기존 위치 유지 */
   }
   
   .main-navigation .main-menu-link {
