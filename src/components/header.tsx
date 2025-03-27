@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { useMenu } from "@/lib/MenuContext";
+import Hamburger from "./hamburger";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -50,32 +51,37 @@ export default function Header() {
     };
   }, [lastScrollY]);
   
-  // 헤더 배경색 설정
-  const headerBg = scrolled ? 'bg-white/90' : 'bg-transparent';
+  // 헤더 배경색 항상 흰색으로 설정
+  const headerBg = 'bg-white';
   
   return (
     <header 
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${headerBg} ${
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${headerBg} shadow-sm ${
         hidden ? '-translate-y-full' : 'translate-y-0'
       }`}
     >
-      <div className="fixed top-4 left-4 md:top-8 md:left-8 z-50">
-        <Link 
-          href="/" 
-          onClick={() => {
-            setActivePage(null);
-            setMenuActive(false);
-          }}
-        >
-          <Image 
-            src={logoSrc}
-            alt="The JPC Logo" 
-            width={120} 
-            height={48} 
-            priority
-            className="w-[80px] md:w-[120px]"
-          />
-        </Link>
+      <div className="container mx-auto relative py-4 px-4 md:py-6 md:px-8 flex justify-between items-center">
+        <div>
+          <Link 
+            href="/" 
+            onClick={() => {
+              setActivePage(null);
+              setMenuActive(false);
+            }}
+          >
+            <Image 
+              src={logoSrc}
+              alt="The JPC Logo" 
+              width={120} 
+              height={48} 
+              priority
+              className="w-[80px] md:w-[120px]"
+            />
+          </Link>
+        </div>
+        
+        {/* 햄버거 메뉴 버튼 */}
+        <Hamburger />
       </div>
     </header>
   );

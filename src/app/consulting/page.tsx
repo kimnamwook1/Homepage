@@ -1,15 +1,11 @@
 "use client";
 import Header from "@/components/header";
-import Hamburger from "@/components/hamburger";
 
 export default function Consulting() {
   return (
     <main className="min-h-screen flex flex-col bg-white">
       {/* 헤더 */}
       <Header />
-
-      {/* 햄버거 메뉴 */}
-      <Hamburger />
 
       {/* 중앙 콘텐츠 - 흰색 블록 전체 페이지 확장 */}
       <div className="container mx-auto px-4 md:px-8 pt-64 pb-16">
