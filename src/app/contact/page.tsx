@@ -4,41 +4,37 @@ import Hamburger from "@/components/hamburger";
 
 export default function Contact() {
   return (
-    <main className="min-h-screen flex flex-col">
-      {/* 상단 섹션 - Bordeaux 빨간색 배경 */}
-      <section className="bg-[#9B2335] text-white h-[50vh] flex flex-col justify-between relative">
-        {/* 헤더 */}
-        <Header />
+    <main className="min-h-screen flex flex-col bg-white">
+      {/* 헤더 */}
+      <Header />
 
-        {/* 햄버거 메뉴 */}
-        <Hamburger />
+      {/* 햄버거 메뉴 */}
+      <Hamburger />
 
-        {/* Contact 제목 */}
-        <div className="container mx-auto px-8 pb-32 mt-auto pl-[13rem]">
-          <h1 className="text-7xl md:text-[9.6rem] font-bold tracking-tighter">Contact</h1>
+      {/* 중앙 콘텐츠 - 흰색 블록 전체 페이지 확장 */}
+      <div className="container mx-auto px-4 md:px-8 pt-64 pb-16">
+        <div className="section-title-box mb-12 py-2 px-4 rounded-md shadow-md border border-gray-200 bg-white">
+          <h2 className="text-2xl md:text-3xl font-semibold mb-0 text-black">Contact</h2>
         </div>
-      </section>
-
-      {/* 하단 콘텐츠 섹션 */}
-      <section className="bg-black text-white h-[50vh] py-20">
-        <div className="container mx-auto px-8 pl-[13rem]">
-          <div className="flex flex-col md:flex-row gap-8">
-            {/* 좌측 섹션 */}
-            <div className="md:pr-8 pl-0 md:w-1/3">
-              <h2 className="text-6xl md:text-7xl font-bold">Seoul</h2>
-            </div>
-
-            {/* 우측 섹션 - 서울 주소 */}
-            <div className="md:pl-8 md:w-2/3">
-              <div className="space-y-2 text-lg mt-4 md:mt-1">
-                <p>180, Bangbae-ro, Seocho-gu</p>
-                <p>Seoul, Republic of Korea 06586</p>
-                <p className="mt-4">E: jonathankim@thejpc.kr</p>
-              </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16">
+          {/* 좌측 컬럼 - 임팩트 문구 */}
+          <div className="md:col-span-4">
+            <h3 className="impact-statement text-3xl md:text-5xl lg:text-6xl font-bold text-black leading-tight mb-6">
+              Seoul
+            </h3>
+          </div>
+          
+          {/* 우측 컬럼 - 설명 텍스트 */}
+          <div className="md:col-span-7">
+            <div className="space-y-2 text-lg text-black">
+              <p>180, Bangbae-ro, Seocho-gu</p>
+              <p>Seoul, Republic of Korea 06586</p>
+              <p className="mt-4">E: jonathankim@thejpc.kr</p>
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </main>
   );
 }

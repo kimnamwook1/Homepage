@@ -19,8 +19,19 @@ export default function Unreal() {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 mb-16">
-          {/* 우측 컬럼 - 영상 2개 (순서를 먼저 배치) */}
-          <div className="md:col-span-8 order-first">
+          {/* 좌측 컬럼 - 임팩트 문구 (모바일에서는 아래, PC에서는 좌측) */}
+          <div className="order-last md:order-first md:col-span-4">
+            <h3 className="impact-statement text-2xl md:text-4xl lg:text-5xl font-bold text-black leading-tight mb-6">
+              LOOKSTEN's<br/>
+              Unreal Engine based<br/>
+              Providing services for<br/>
+              Virtual game production<br/>
+              Virtual streamer Studio
+            </h3>
+          </div>
+          
+          {/* 우측 컬럼 - 영상 2개 (모바일에서는 위, PC에서는 우측) */}
+          <div className="order-first md:order-last md:col-span-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {/* 첫 번째 영상 영역 */}
               <div className="relative w-full pb-[56.25%] bg-gray-200 rounded-md overflow-hidden">
@@ -36,17 +47,6 @@ export default function Unreal() {
                 </div>
               </div>
             </div>
-          </div>
-          
-          {/* 좌측 컬럼 - 임팩트 문구 (순서를 나중에 배치) */}
-          <div className="md:col-span-4 order-last">
-            <h3 className="impact-statement text-2xl md:text-4xl lg:text-5xl font-bold text-black leading-tight mb-6">
-              LOOKSTEN's<br/>
-              Unreal Engine based<br/>
-              Providing services for<br/>
-              Virtual game production<br/>
-              Virtual streamer Studio
-            </h3>
           </div>
         </div>
       </div>
