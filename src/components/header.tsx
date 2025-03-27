@@ -66,9 +66,9 @@ export default function Header() {
       ref={headerRef}
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${headerBg} shadow-sm ${
         hidden ? '-translate-y-full' : 'translate-y-0'
-      } ${menuOpen ? 'md:pr-96' : ''}`}
+      }`}
     >
-      <div className="container mx-auto relative py-4 px-4 md:py-6 md:px-8 flex justify-between items-center">
+      <div className="container mx-auto relative py-4 px-4 md:py-6 md:px-8 flex justify-between items-center z-50">
         <div>
           <Link 
             href="/" 

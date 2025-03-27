@@ -7,6 +7,12 @@ body.overflow-hidden {
   overflow: hidden;
 }
 
+/* 사이드바 스타일 명시적 지정 */
+.side-menu {
+  background-color: #23272D !important;
+  color: white !important;
+}
+
 /* 스크롤바 스타일 */
 ::-webkit-scrollbar {
   width: 8px;

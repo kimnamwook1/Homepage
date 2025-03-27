@@ -45,7 +45,7 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ isOpen, toggleMenu }) => 
 
   return (
     <div 
-      className={`fixed top-0 right-0 w-full md:w-96 h-full bg-[#23272D] z-50 transition-transform duration-300 ease-in-out ${
+      className={`fixed top-0 right-0 w-full md:w-96 h-full bg-[#23272D] side-menu z-40 transition-transform duration-300 ease-in-out ${
         isOpen ? 'translate-x-0' : 'translate-x-full'
       }`}
     >
@@ -120,7 +120,7 @@ const HamburgerButton: React.FC<{ toggleMenu: () => void; isOpen: boolean }> = (
   
   return (
     <button 
-      className={`absolute top-4 right-4 md:top-6 md:right-8 z-50 flex flex-col justify-center items-center w-10 h-10 p-2 rounded-md bg-gray-200/80 backdrop-blur-sm transition-transform duration-300 ${isOpen ? 'md:translate-x-[-384px]' : ''}`}
+      className="absolute top-4 right-4 md:top-6 md:right-8 z-50 flex flex-col justify-center items-center w-10 h-10 p-2 rounded-md bg-gray-200/80 backdrop-blur-sm"
       onClick={toggleMenu}
       aria-label={isOpen ? "Close menu" : "Open menu"}
     >
