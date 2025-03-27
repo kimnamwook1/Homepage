@@ -32,8 +32,8 @@ export default function Unreal() {
 
       {/* 중앙 콘텐츠 - 흰색 블록 전체 페이지 확장 */}
       <div className="container mx-auto px-4 md:px-8 pt-64 pb-16">
-        <div className="mb-12">
-          <h2 className="text-2xl md:text-3xl font-semibold mb-2 text-black dark:text-white drop-shadow-md">Studio</h2>
+        <div className="mb-12 p-4 bg-white dark:bg-[#1e1e1e] rounded-md shadow-md border border-gray-200 dark:border-gray-800">
+          <h2 className="text-2xl md:text-3xl font-semibold mb-0 text-black dark:text-white">Studio</h2>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16">
