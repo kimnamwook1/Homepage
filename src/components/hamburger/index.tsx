@@ -51,11 +51,14 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ isOpen, toggleMenu }) => 
       style={{backgroundColor: '#23272D'}}
     >
       <button 
-        className="absolute top-4 right-4 md:top-8 md:right-8 text-white text-3xl z-50 w-10 h-10 flex items-center justify-center rounded-full bg-gray-700 hover:bg-gray-600"
+        className="absolute top-4 right-4 md:top-8 md:right-8 text-white z-50 w-10 h-10 flex items-center justify-center rounded-full bg-gray-700 hover:bg-gray-600"
         onClick={toggleMenu}
         aria-label="Close menu"
       >
-        ×
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
       </button>
 
       <div className="p-12 pt-24 text-white w-full h-full bg-[#23272D]" style={{backgroundColor: '#23272D', height: '100vh', overflow: 'auto'}}>
