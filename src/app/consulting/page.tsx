@@ -47,19 +47,7 @@ export default function Consulting() {
           {/* 우측 컬럼 - 설명 텍스트 */}
           <div className="space-y-6">
             <p className={`text-base md:text-lg ${isDarkMode ? 'text-white' : 'text-black'}`}>
-              Our consulting services combine industry expertise with innovative thinking to help clients navigate complex challenges and achieve sustainable growth. We work closely with businesses of all sizes to develop tailored strategies that address their unique needs and objectives.
-            </p>
-            
-            <p className={`text-base md:text-lg ${isDarkMode ? 'text-white' : 'text-black'}`}>
-              Using a data-driven approach, we analyze market trends, consumer behavior, and competitive landscapes to identify opportunities and develop actionable recommendations. Our team of experienced consultants brings diverse perspectives and specialized knowledge to every engagement.
-            </p>
-            
-            <p className={`text-base md:text-lg ${isDarkMode ? 'text-white' : 'text-black'}`}>
-              We believe in building lasting partnerships with our clients, going beyond traditional consulting to provide ongoing support and guidance as they implement our recommendations and adapt to changing market conditions.
-            </p>
-            
-            <p className={`text-base md:text-lg ${isDarkMode ? 'text-white' : 'text-black'}`}>
-              From strategic planning and market analysis to organizational transformation and operational efficiency, our comprehensive suite of services is designed to help clients achieve their goals and unlock new opportunities for growth and innovation.
+              (Example) Our consulting services combine industry expertise with innovative thinking to help clients navigate complex challenges and achieve sustainable growth. We work closely with businesses of all sizes to develop tailored strategies that address their unique needs and objectives. Using a data-driven approach, we analyze market trends, consumer behavior, and competitive landscapes to identify opportunities and develop actionable recommendations. Our team of experienced consultants brings diverse perspectives and specialized knowledge to every engagement. We believe in building lasting partnerships with our clients, going beyond traditional consulting to provide ongoing support and guidance as they implement our recommendations and adapt to changing market conditions. From strategic planning and market analysis to organizational transformation and operational efficiency, our comprehensive suite of services is designed to help clients achieve their goals and unlock new opportunities for growth and innovation.
             </p>
           </div>
         </div>

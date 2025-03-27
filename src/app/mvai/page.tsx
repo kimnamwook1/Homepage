@@ -47,19 +47,7 @@ export default function MVAI() {
           {/* 우측 컬럼 - 설명 텍스트 */}
           <div className="space-y-6">
             <p className={`text-base md:text-lg ${isDarkMode ? 'text-white' : 'text-black'}`}>
-              Our MVAI (Metaverse AI) services represent the cutting edge of immersive digital experiences, combining the expansive potential of metaverse environments with the transformative power of artificial intelligence. We create seamless, intelligent virtual worlds that adapt and respond to user interactions in real-time.
-            </p>
-            
-            <p className={`text-base md:text-lg ${isDarkMode ? 'text-white' : 'text-black'}`}>
-              Through advanced machine learning algorithms and neural networks, our AI systems continuously improve and evolve, providing increasingly personalized and engaging experiences. From intelligent virtual assistants to dynamic environment generation, our AI capabilities enhance every aspect of the metaverse experience.
-            </p>
-            
-            <p className={`text-base md:text-lg ${isDarkMode ? 'text-white' : 'text-black'}`}>
-              We leverage cutting-edge technologies including computer vision, natural language processing, and reinforcement learning to create virtual environments that feel natural, responsive, and truly interactive. Our solutions blur the line between the physical and digital worlds, creating immersive experiences that captivate and inspire.
-            </p>
-            
-            <p className={`text-base md:text-lg ${isDarkMode ? 'text-white' : 'text-black'}`}>
-              Whether you're looking to create virtual training simulations, immersive entertainment experiences, or innovative marketing campaigns, our MVAI services provide the tools and expertise needed to bring your vision to life in the rapidly expanding metaverse landscape.
+              (Example) Our MVAI (Metaverse AI) services represent the cutting edge of immersive digital experiences, combining the expansive potential of metaverse environments with the transformative power of artificial intelligence. We create seamless, intelligent virtual worlds that adapt and respond to user interactions in real-time. Through advanced machine learning algorithms and neural networks, our AI systems continuously improve and evolve, providing increasingly personalized and engaging experiences. From intelligent virtual assistants to dynamic environment generation, our AI capabilities enhance every aspect of the metaverse experience. We leverage cutting-edge technologies including computer vision, natural language processing, and reinforcement learning to create virtual environments that feel natural, responsive, and truly interactive. Our solutions blur the line between the physical and digital worlds, creating immersive experiences that captivate and inspire. Whether you're looking to create virtual training simulations, immersive entertainment experiences, or innovative marketing campaigns, our MVAI services provide the tools and expertise needed to bring your vision to life in the rapidly expanding metaverse landscape.
             </p>
           </div>
         </div>

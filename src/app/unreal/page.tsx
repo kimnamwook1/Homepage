@@ -47,19 +47,7 @@ export default function Unreal() {
           {/* 우측 컬럼 - 설명 텍스트 */}
           <div className="space-y-6">
             <p className={`text-base md:text-lg ${isDarkMode ? 'text-white' : 'text-black'}`}>
-              Our Unreal Engine services harness the power of one of the world's most advanced real-time 3D creation tools to deliver stunning visual experiences across multiple platforms and industries. With photorealistic rendering capabilities and unmatched flexibility, we create immersive environments that captivate audiences and push the boundaries of digital content creation.
-            </p>
-            
-            <p className={`text-base md:text-lg ${isDarkMode ? 'text-white' : 'text-black'}`}>
-              Our team of skilled developers and artists leverages Unreal Engine's extensive toolset to create everything from interactive architectural visualizations and product configurators to cutting-edge virtual production setups and immersive training simulations. We combine technical expertise with creative vision to bring your ideas to life with unprecedented visual fidelity.
-            </p>
-            
-            <p className={`text-base md:text-lg ${isDarkMode ? 'text-white' : 'text-black'}`}>
-              We specialize in optimizing Unreal Engine projects for performance across a wide range of hardware, ensuring smooth experiences on everything from high-end workstations to mobile devices. Our technical pipeline incorporates the latest advancements in real-time rendering, physics simulation, and animation to create dynamic, responsive environments.
-            </p>
-            
-            <p className={`text-base md:text-lg ${isDarkMode ? 'text-white' : 'text-black'}`}>
-              Whether you're looking to create interactive marketing experiences, virtual sets for film and television, or immersive gameplay environments, our Unreal Engine services provide the expertise and creative vision needed to exceed expectations and deliver compelling visual experiences that stand out in today's digital landscape.
+              (Example) Our Unreal Engine services harness the power of one of the world's most advanced real-time 3D creation tools to deliver stunning visual experiences across multiple platforms and industries. With photorealistic rendering capabilities and unmatched flexibility, we create immersive environments that captivate audiences and push the boundaries of digital content creation. Our team of skilled developers and artists leverages Unreal Engine's extensive toolset to create everything from interactive architectural visualizations and product configurators to cutting-edge virtual production setups and immersive training simulations. We combine technical expertise with creative vision to bring your ideas to life with unprecedented visual fidelity. We specialize in optimizing Unreal Engine projects for performance across a wide range of hardware, ensuring smooth experiences on everything from high-end workstations to mobile devices. Our technical pipeline incorporates the latest advancements in real-time rendering, physics simulation, and animation to create dynamic, responsive environments. Whether you're looking to create interactive marketing experiences, virtual sets for film and television, or immersive gameplay environments, our Unreal Engine services provide the expertise and creative vision needed to exceed expectations and deliver compelling visual experiences that stand out in today's digital landscape.
             </p>
           </div>
         </div>
