@@ -6,11 +6,6 @@ import useDarkMode from "@/lib/useDarkMode";
 export default function AboutUs() {
   const isDarkMode = useDarkMode();
   
-  // 다크모드에 따라 로고 이미지 선택
-  const logoSrc = isDarkMode 
-    ? "/images/TheJPC_logo_White.png" 
-    : "/images/TheJPC_logo_Blacked.png";
-  
   return (
     <main className={`min-h-screen flex flex-col ${isDarkMode ? 'bg-[#121212]' : 'bg-white'}`}>
       {/* 헤더 */}

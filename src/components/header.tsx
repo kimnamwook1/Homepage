@@ -12,13 +12,11 @@ export default function Header() {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [hidden, setHidden] = useState(false);
   const { setActivePage, setMenuActive } = useMenu();
-  const pathname = usePathname();
-  const isContactPage = pathname === '/contact';
   
-  // 다크모드에 따라 로고 이미지 선택 - Contact 페이지에서는 다른 로고 사용
-  const logoSrc = isContactPage
-    ? (isDarkMode ? "/images/TheJPC_logo_White.png" : "/images/thejpc-logo.svg")
-    : (isDarkMode ? "/images/TheJPC_logo_White.png" : "/images/TheJPC_logo_Blacked.png");
+  // 모든 페이지에서 동일한 로고 사용
+  const logoSrc = isDarkMode 
+    ? "/images/TheJPC_logo_White.png" 
+    : "/images/TheJPC_logo_Blacked.png";
   
   useEffect(() => {
     const handleScroll = () => {
@@ -52,12 +50,10 @@ export default function Header() {
     };
   }, [lastScrollY]);
   
-  // Contact 페이지의 경우 빨간색 배경
-  const headerBg = isContactPage && !scrolled
-    ? 'bg-transparent'
-    : scrolled 
-      ? (isDarkMode ? 'bg-[#121212]/90' : 'bg-white/90') 
-      : 'bg-transparent';
+  // 스크롤 시 배경 추가
+  const headerBg = scrolled 
+    ? (isDarkMode ? 'bg-[#121212]/90' : 'bg-white/90') 
+    : 'bg-transparent';
   
   return (
     <header 
@@ -65,10 +61,9 @@ export default function Header() {
         hidden ? '-translate-y-full' : 'translate-y-0'
       }`}
     >
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+      <div className="fixed top-[70px] left-[120px] z-50">
         <Link 
           href="/" 
-          className="z-50"
           onClick={() => {
             setActivePage(null);
             setMenuActive(false);

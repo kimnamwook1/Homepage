@@ -6,8 +6,6 @@ import useDarkMode from "@/lib/useDarkMode";
 export default function Contact() {
   const isDarkMode = useDarkMode();
   
-  // 다크모드에 따라 로고 이미지 선택
-  const logoSrc = isDarkMode ? "/images/TheJPC_logo_White.png" : "/images/thejpc-logo.svg";
   return (
     <main className="min-h-screen flex flex-col">
       {/* 상단 섹션 - Bordeaux 빨간색 배경 */}
