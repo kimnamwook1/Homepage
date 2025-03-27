@@ -28,7 +28,7 @@ export default function MVAI() {
           </div>
           
           {/* 우측 컬럼 - 설명 텍스트 */}
-          <div className="md:col-span-7">
+          <div className="md:col-span-8">
             <div className="text-base md:text-lg text-black space-y-4">
               <p>The JPC's MVAI is an AI-powered music video generation solution designed to revolutionize the way artists visualize their music.</p>
               

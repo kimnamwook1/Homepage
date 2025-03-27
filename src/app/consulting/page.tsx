@@ -26,7 +26,7 @@ export default function Consulting() {
           </div>
           
           {/* 우측 컬럼 - 설명 텍스트 */}
-          <div className="md:col-span-7">
+          <div className="md:col-span-8">
             <div className="text-base md:text-lg text-black space-y-4">
               <p><strong>The JPC Consulting</strong> provides tailored strategic consulting for companies and projects at the intersection of Media & Entertainment and emerging technologies. Leveraging our deep expertise across content, technology, and business, we deliver actionable insights that address each client's unique goals and challenges.</p>
 

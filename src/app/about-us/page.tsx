@@ -26,7 +26,7 @@ export default function AboutUs() {
           </div>
           
           {/* 우측 컬럼 - 설명 텍스트 */}
-          <div className="md:col-span-7">
+          <div className="md:col-span-8">
             <p className="text-base md:text-lg text-black">
               (Example) TheJPC is a forward-thinking organization dedicated to pushing the boundaries of digital innovation across multiple industries. Founded on the principle that technology should enhance human potential, our team combines technical expertise with creative vision to deliver cutting-edge solutions that address complex challenges and create new opportunities. With a focus on emerging technologies including artificial intelligence, immersive environments, and real-time visualization, we collaborate with clients to develop customized solutions that drive meaningful results. Our interdisciplinary approach brings together specialists from diverse backgrounds, fostering innovation through the cross-pollination of ideas and methodologies. We believe in the transformative power of technology when guided by human insight and ethical considerations. Our work is characterized by a commitment to quality, a passion for innovation, and a deep understanding of the contexts in which our solutions operate. We strive not just to meet current needs, but to anticipate future challenges and opportunities. As we continue to grow and evolve, our mission remains constant: to harness the potential of cutting-edge technology to create experiences and solutions that inspire, empower, and transform. We invite you to join us on this journey as we shape the future of digital innovation together.
             </p>
