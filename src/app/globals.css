@@ -7,7 +7,8 @@ body.has-menu-open {
   overflow: hidden !important;
 }
 
-body.has-menu-open::after {
+/* 오버레이 제거 */
+/* body.has-menu-open::after {
   content: "";
   position: fixed;
   top: 0;
@@ -17,7 +18,7 @@ body.has-menu-open::after {
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 40;
   pointer-events: none;
-}
+} */
 
 /* 사이드 메뉴 관련 스타일 */
 body.overflow-hidden {

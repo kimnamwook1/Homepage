@@ -45,7 +45,7 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ isOpen, toggleMenu }) => 
 
   return (
     <div 
-      className={`fixed top-0 right-0 w-full md:w-96 h-full bg-[#23272D] side-menu z-50 transition-transform duration-300 ease-in-out ${
+      className={`fixed top-0 right-0 w-full md:w-96 h-full bg-[#23272D] side-menu z-50 transition-transform duration-300 ease-in-out shadow-xl border-l border-gray-700 ${
         isOpen ? 'translate-x-0' : 'translate-x-full'
       }`}
     >
