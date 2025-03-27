@@ -1,6 +1,7 @@
 "use client";
 
 import React, { createContext, useContext, useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 
 // 애니메이션 컨텍스트 타입 정의
 type AnimationContextType = {
@@ -16,33 +17,24 @@ export const useAnimation = () => useContext(AnimationContext);
 // 애니메이션 프로바이더 컴포넌트
 export const AnimationProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [animateIn, setAnimateIn] = useState(false);
+  const pathname = usePathname(); // 현재 페이지 경로 가져오기
 
   useEffect(() => {
-    // 로컬 스토리지에서 애니메이션 상태 확인
+    // 페이지 경로가 변경될 때마다 애니메이션 상태 초기화 및 다시 실행
     if (typeof window !== 'undefined') {
-      const isAnimationComplete = localStorage.getItem('animationComplete') === 'true';
+      // 애니메이션 상태 초기화
+      setAnimateIn(false);
       
-      // 이미 애니메이션이 완료되었다면 바로 애니메이션 상태 설정
-      if (isAnimationComplete) {
+      // 지연 후 애니메이션 시작
+      const timer = setTimeout(() => {
         setAnimateIn(true);
-      } else {
-        // 처음 방문이면 지연 후 애니메이션 시작
-        const timer = setTimeout(() => {
-          setAnimateIn(true);
-        }, 100);
-        
-        // 애니메이션이 완료되면 로컬 스토리지에 상태 저장
-        const animationComplete = setTimeout(() => {
-          localStorage.setItem('animationComplete', 'true');
-        }, 2000); // 모든 애니메이션이 완료되도록 충분한 시간 설정
-        
-        return () => {
-          clearTimeout(timer);
-          clearTimeout(animationComplete);
-        };
-      }
+      }, 100);
+      
+      return () => {
+        clearTimeout(timer);
+      };
     }
-  }, []);
+  }, [pathname]); // 페이지 경로가 변경될 때마다 실행
 
   return (
     <AnimationContext.Provider value={{ animateIn }}>
@@ -74,16 +66,15 @@ export const AnimatedText: React.FC<{
 }> = ({ children, className = '', delay = 0 }) => {
   const { animateIn } = useAnimation();
   
-  // 애니메이션 완료 후 상태를 유지하기 위한 스타일 추가
+  // 인라인 스타일만 사용하여 애니메이션 제어
   const textStyle = {
-    opacity: animateIn ? 1 : 0, // 애니메이션 완료 후 항상 보이게 설정
+    opacity: animateIn ? 1 : 0,
     transform: animateIn ? 'translateY(0)' : 'translateY(20px)',
-    animationDelay: `${delay}ms`,
-    transition: 'opacity 0.8s ease, transform 0.8s ease'
+    transition: `opacity 0.8s ease ${delay}ms, transform 0.8s ease ${delay}ms`
   };
   
   return (
-    <div className={`animate-fade-up ${className} ${animateIn ? 'animate-in' : ''}`} style={textStyle}>
+    <div className={`${className}`} style={textStyle}>
       {children}
     </div>
   );
