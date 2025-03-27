@@ -36,16 +36,16 @@ export default function Unreal() {
           <h2 className="text-2xl md:text-3xl font-semibold mb-2 text-black dark:text-white">Studio</h2>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12">
           {/* 좌측 컬럼 - 임팩트 문구 */}
-          <div>
+          <div className="md:col-span-1">
             <h3 className={`text-3xl md:text-5xl lg:text-6xl font-bold text-black dark:text-white leading-tight mb-6`}>
               Revolutionary visual experiences powered by Unreal Engine.
             </h3>
           </div>
           
           {/* 우측 컬럼 - 설명 텍스트 */}
-          <div className="space-y-6">
+          <div className="md:col-span-3">
             <p className={`text-base md:text-lg ${isDarkMode ? 'text-white' : 'text-black'}`}>
               (Example) Our Unreal Engine services harness the power of one of the world's most advanced real-time 3D creation tools to deliver stunning visual experiences across multiple platforms and industries. With photorealistic rendering capabilities and unmatched flexibility, we create immersive environments that captivate audiences and push the boundaries of digital content creation. Our team of skilled developers and artists leverages Unreal Engine's extensive toolset to create everything from interactive architectural visualizations and product configurators to cutting-edge virtual production setups and immersive training simulations. We combine technical expertise with creative vision to bring your ideas to life with unprecedented visual fidelity. We specialize in optimizing Unreal Engine projects for performance across a wide range of hardware, ensuring smooth experiences on everything from high-end workstations to mobile devices. Our technical pipeline incorporates the latest advancements in real-time rendering, physics simulation, and animation to create dynamic, responsive environments. Whether you're looking to create interactive marketing experiences, virtual sets for film and television, or immersive gameplay environments, our Unreal Engine services provide the expertise and creative vision needed to exceed expectations and deliver compelling visual experiences that stand out in today's digital landscape.
             </p>
