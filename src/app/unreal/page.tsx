@@ -22,38 +22,6 @@ export default function Unreal() {
         <div className="mb-12 py-2 px-0">
           <h2 className="text-2xl md:text-3xl font-semibold mb-0 text-white border-b border-gray-400 pb-2">Studio</h2>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 mb-16">
-          {/* 좌측 컬럼 - 임팩트 문구 (모바일에서는 아래, PC에서는 좌측) */}
-          <div className="order-last md:order-first md:col-span-4">
-            <h3 className="impact-statement text-2xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-6 drop-shadow-md">
-              LOOKSTEN's<br/>
-              Unreal Engine based<br/>
-              Providing services for<br/>
-              Virtual game production<br/>
-              Virtual streamer Studio
-            </h3>
-          </div>
-          
-          {/* 우측 컬럼 - 영상 2개 (모바일에서는 위, PC에서는 우측) */}
-          <div className="order-first md:order-last md:col-span-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {/* 첫 번째 영상 영역 */}
-              <div className="relative w-full pb-[56.25%] bg-gray-800/50 rounded-md overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-gray-300">영상 (링크) 삽입 영역</span>
-                </div>
-              </div>
-              
-              {/* 두 번째 영상 영역 */}
-              <div className="relative w-full pb-[56.25%] bg-gray-800/50 rounded-md overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-gray-300">영상 (링크) 삽입 영역</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </main>
   );
