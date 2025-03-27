@@ -123,7 +123,7 @@ const HamburgerButton: React.FC<{ toggleMenu: () => void; isOpen: boolean }> = (
   
   return (
     <button 
-      className="absolute top-2 right-4 md:top-6 md:right-8 z-[60] flex flex-col justify-center items-center w-10 h-10 p-2 rounded-md bg-white shadow-sm"
+      className="absolute top-2 right-4 md:top-6 md:right-8 z-[60] flex flex-col justify-center items-center w-10 h-10 p-2 bg-white"
       onClick={toggleMenu}
       aria-label={isOpen ? "Close menu" : "Open menu"}
     >
