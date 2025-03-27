@@ -321,7 +321,7 @@ html, body {
 /* 반응형 스타일링 - 화면 크기에 따른 상대적 위치 조정 */
 @media (min-width: 1400px) {
   .main-navigation {
-    left: 20%; /* 이전 값과 현재 값의 중간값으로 조정 */
+    left: 23%; /* 기본값과 동일하게 설정 */
     top: 400px;
   }
   
