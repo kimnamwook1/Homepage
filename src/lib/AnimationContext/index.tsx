@@ -79,7 +79,7 @@ export const AnimatedText: React.FC<{
     opacity: animateIn ? 1 : 0, // 애니메이션 완료 후 항상 보이게 설정
     transform: animateIn ? 'translateY(0)' : 'translateY(20px)',
     animationDelay: `${delay}ms`,
-    transition: 'opacity 0.5s ease, transform 0.5s ease'
+    transition: 'opacity 0.8s ease, transform 0.8s ease'
   };
   
   return (
