@@ -47,14 +47,14 @@ export default function MVAI() {
           {/* 좌측 컬럼 - 임팩트 문구 */}
           <div className="md:col-span-4">
             <h3 className="impact-statement text-3xl md:text-5xl lg:text-6xl font-bold text-black leading-tight mb-6">
-              Metaverse enhanced by artificial intelligence.
+              We turn every sound into a story
             </h3>
           </div>
           
           {/* 우측 컬럼 - 설명 텍스트 */}
           <div className="md:col-span-7">
             <p className="text-base md:text-lg text-black">
-              (Example) Our MVAI (Metaverse AI) services represent the cutting edge of immersive digital experiences, combining the expansive potential of metaverse environments with the transformative power of artificial intelligence. We create seamless, intelligent virtual worlds that adapt and respond to user interactions in real-time. Through advanced machine learning algorithms and neural networks, our AI systems continuously improve and evolve, providing increasingly personalized and engaging experiences. From intelligent virtual assistants to dynamic environment generation, our AI capabilities enhance every aspect of the metaverse experience. We leverage cutting-edge technologies including computer vision, natural language processing, and reinforcement learning to create virtual environments that feel natural, responsive, and truly interactive. Our solutions blur the line between the physical and digital worlds, creating immersive experiences that captivate and inspire. Whether you're looking to create virtual training simulations, immersive entertainment experiences, or innovative marketing campaigns, our MVAI services provide the tools and expertise needed to bring your vision to life in the rapidly expanding metaverse landscape.
+              The JPC's MVAI is an AI-powered music video generation solution designed to revolutionize the way artists visualize their music. By deeply analyzing songs through our proprietary AI model—trained on artist styles, lyrics, tempo, instrumentation, and emotional tone—we create tailored video production plans that truly reflect each artist's identity and creative intent. Through the seamless integration of generative AI and our production expertise, MVAI produces high-quality, concept-driven music videos in a fraction of the time and cost of traditional production methods. This innovation enables artists, regardless of scale or budget, to turn their sound into stunning visuals—without compromise. At the core of MVAI is <strong>The JPC's internalized AI framework</strong>, combining music intelligence, visual generation, and post-production automation. We believe that music video creation should no longer be a privilege for the few, but a powerful storytelling tool accessible to all artists. MVAI is not just a product. It's a creative engine that empowers music to move, inspire, and reach further—visually, emotionally, and globally.
             </p>
           </div>
         </div>
