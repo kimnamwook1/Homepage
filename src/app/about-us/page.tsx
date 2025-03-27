@@ -17,15 +17,29 @@ export default function AboutUs() {
           {/* 좌측 컬럼 - 임팩트 문구 */}
           <div className="md:col-span-4">
             <h3 className="impact-statement text-3xl md:text-5xl lg:text-6xl font-bold text-black leading-tight mb-6">
-              Pioneering the future of digital innovation.
+              Expert-driven. Innovation-led. Story-first.
             </h3>
           </div>
           
           {/* 우측 컬럼 - 설명 텍스트 */}
           <div className="md:col-span-8">
-            <p className="text-base md:text-lg text-black">
-              (Example) TheJPC is a forward-thinking organization dedicated to pushing the boundaries of digital innovation across multiple industries. Founded on the principle that technology should enhance human potential, our team combines technical expertise with creative vision to deliver cutting-edge solutions that address complex challenges and create new opportunities. With a focus on emerging technologies including artificial intelligence, immersive environments, and real-time visualization, we collaborate with clients to develop customized solutions that drive meaningful results. Our interdisciplinary approach brings together specialists from diverse backgrounds, fostering innovation through the cross-pollination of ideas and methodologies. We believe in the transformative power of technology when guided by human insight and ethical considerations. Our work is characterized by a commitment to quality, a passion for innovation, and a deep understanding of the contexts in which our solutions operate. We strive not just to meet current needs, but to anticipate future challenges and opportunities. As we continue to grow and evolve, our mission remains constant: to harness the potential of cutting-edge technology to create experiences and solutions that inspire, empower, and transform. We invite you to join us on this journey as we shape the future of digital innovation together.
-            </p>
+            <div className="space-y-6 text-base md:text-lg text-black">
+              <p>
+                For the past decade, The JPC has been at the forefront of content creation, production, and distribution—spanning across film, drama, digital media, and immersive formats such as MR, VR, and XR. Today, we are expanding those creative boundaries even further by seamlessly integrating cutting-edge AI technologies into the core of our content development process.
+              </p>
+              
+              <p>
+                From concept to completion, our work has reached audiences not only in Korea but around the world. Our original content has been distributed through major global platforms including Netflix, Disney+, Amazon Prime Video, Hulu, and YouTube Originals, showcasing our ability to adapt across formats, cultures, and markets.
+              </p>
+              
+              <p>
+                Now, with the rapid evolution of generative AI, The JPC is redefining how media is made. From this very website to our internal creative systems and beyond—AI is now embedded in everything we do. Our proprietary models, creative pipelines, and data-driven strategy allow us to produce smarter, faster, and more resonant content than ever before.
+              </p>
+              
+              <p>
+                The JPC isn't just a production company—we're a next-generation media studio that blends creativity with technology to reshape the entertainment landscape. As we continue to explore new frontiers in AI, immersive storytelling, and real-time production, we remain committed to delivering meaningful innovation that inspires, connects, and elevates.
+              </p>
+            </div>
           </div>
         </div>
       </div>
