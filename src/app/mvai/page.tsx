@@ -39,12 +39,8 @@ export default function MVAI() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16">
           {/* 좌측 컬럼 - 임팩트 문구 */}
           <div className="md:col-span-4">
-            <h3 className={`text-2xl md:text-4xl lg:text-5xl font-bold text-black dark:text-white leading-tight mb-6`}>
-              LOOKSTEN's<br/>
-              Unreal Engine based<br/>
-              Providing services for<br/>
-              Virtual game production<br/>
-              Virtual streamer Studio
+            <h3 className={`text-3xl md:text-5xl lg:text-6xl font-bold text-black dark:text-white leading-tight mb-6`}>
+              Metaverse enhanced by artificial intelligence.
             </h3>
           </div>
           
