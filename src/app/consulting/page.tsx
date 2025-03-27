@@ -31,7 +31,7 @@ export default function Consulting() {
       <Hamburger />
 
       {/* 중앙 콘텐츠 - 흰색 블록 전체 페이지 확장 */}
-      <div className="container mx-auto px-4 md:px-8 pt-32 pb-16">
+      <div className="container mx-auto px-4 md:px-8 pt-48 pb-16">
         <div className="mb-12">
           <h2 className="text-2xl md:text-3xl font-semibold mb-2 text-black dark:text-white">About consulting service</h2>
         </div>
