@@ -47,7 +47,7 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ isOpen, toggleMenu }) => 
       }`}
     >
       <button 
-        className="absolute top-8 right-8 text-white text-3xl"
+        className="absolute top-10 right-8 md:top-12 text-white text-3xl"
         onClick={toggleMenu}
         aria-label="Close menu"
       >
@@ -114,11 +114,11 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ isOpen, toggleMenu }) => 
 // 햄버거 아이콘 버튼 컴포넌트
 const HamburgerButton: React.FC<{ toggleMenu: () => void; isOpen: boolean }> = ({ toggleMenu, isOpen }) => {
   const isDarkMode = useDarkMode();
-  const lineColor = isDarkMode ? 'bg-white' : 'bg-black';
+  const lineColor = 'bg-white'; // 항상 흰색으로 설정
   
   return (
     <button 
-      className="fixed top-8 right-8 z-50 flex flex-col justify-center items-center w-10 h-10"
+      className="fixed top-10 right-8 md:top-12 z-50 flex flex-col justify-center items-center w-10 h-10 p-2 rounded-md bg-black/20 backdrop-blur-sm"
       onClick={toggleMenu}
       aria-label={isOpen ? "Close menu" : "Open menu"}
     >

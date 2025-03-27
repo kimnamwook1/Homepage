@@ -16,7 +16,7 @@ export default function AboutUs() {
 
       {/* 중앙 콘텐츠 - 흰색 블록 전체 페이지 확장 */}
       <div className="container mx-auto px-4 md:px-8 pt-64 pb-16">
-        <div className="mb-12 py-2 px-4 bg-white dark:bg-[#1e1e1e] rounded-md shadow-md border border-gray-200 dark:border-gray-800">
+        <div className="mb-12 py-2 px-4 bg-white dark:bg-[#212121] rounded-md shadow-md border border-gray-200 dark:border-gray-700">
           <h2 className="text-2xl md:text-3xl font-semibold mb-0 text-black dark:text-white">About TheJPC</h2>
         </div>
         
