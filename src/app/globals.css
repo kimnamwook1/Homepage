@@ -137,7 +137,7 @@ html, body {
 .main-navigation {
   position: fixed;
   top: 400px;
-  left: 180px; /* 로고 근처에서 시작하여 고정 값 사용 */
+  left: min(180px, 20%); /* 최대 180px이며, 화면이 작아지면 화면 너비의 20%로 설정 */
   z-index: 40;
   transform: none;
 }
@@ -321,7 +321,7 @@ html, body {
 /* 반응형 스타일링 - 화면 크기에 따른 상대적 위치 조정 */
 @media (min-width: 1400px) {
   .main-navigation {
-    left: 180px; /* 큰 화면에서도 로고 근처 시작 */
+    left: min(180px, 15%); /* 큰 화면에서도 안전한 값 사용 */
     top: 400px;
   }
   
@@ -336,7 +336,7 @@ html, body {
 
 @media (max-width: 1200px) {
   .main-navigation {
-    left: 180px; /* 중간 화면에서도 로고 근처 시작 */
+    left: min(180px, 18%); /* 중간 화면에서도 안전한 값 사용 */
     top: 400px;
   }
   
@@ -351,7 +351,7 @@ html, body {
 
 @media (max-width: 992px) {
   .main-navigation {
-    left: 180px; /* 작은 PC 화면에서도 로고 근처 시작 */
+    left: min(160px, 20%); /* 작은 PC 화면에서도 안전한 값 사용 */
     top: 400px;
   }
   
