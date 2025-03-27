@@ -137,7 +137,7 @@ html, body {
 .main-navigation {
   position: fixed;
   top: 400px;
-  left: 26%; /* 26%로 업데이트 */
+  left: 24%; /* 24%로 업데이트 */
   z-index: 40;
   transform: none;
 }
@@ -321,7 +321,7 @@ html, body {
 /* 반응형 스타일링 - 화면 크기에 따른 상대적 위치 조정 */
 @media (min-width: 1400px) {
   .main-navigation {
-    left: 26%; /* 26%로 업데이트 */
+    left: 24%; /* 24%로 업데이트 */
     top: 400px;
   }
   
