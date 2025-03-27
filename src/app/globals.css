@@ -137,7 +137,7 @@ html, body {
 .main-navigation {
   position: fixed;
   top: 400px; /* 메뉴 위치를 화면 중앙에 가까게 조정 */
-  left: calc(50% - 200px); /* 화면 중앙에서 왼쪽으로 200px 이동 */
+  left: calc(50% - 600px); /* 화면 중앙에서 왼쪽으로 600px 이동 (400px 추가) */
   z-index: 40;
   transform: none; /* 변환 방지 */
 }
@@ -321,7 +321,7 @@ html, body {
 /* 반응형 스타일링 - 화면 크기에 따른 상대적 위치 조정 */
 @media (min-width: 1400px) {
   .main-navigation {
-    left: calc(50% - 200px); /* 큰 화면에서 중앙에서 왼쪽으로 200px */
+    left: calc(50% - 600px); /* 큰 화면에서 중앙에서 왼쪽으로 600px */
     top: 400px;
   }
   
@@ -336,7 +336,7 @@ html, body {
 
 @media (max-width: 1200px) {
   .main-navigation {
-    left: calc(50% - 170px); /* 중간 화면에서 중앙에서 왼쪽으로 170px */
+    left: calc(50% - 570px); /* 중간 화면에서 중앙에서 왼쪽으로 570px */
     top: 400px;
   }
   
@@ -351,7 +351,7 @@ html, body {
 
 @media (max-width: 992px) {
   .main-navigation {
-    left: calc(50% - 150px); /* 작은 PC 화면에서 중앙에서 왼쪽으로 150px */
+    left: calc(50% - 550px); /* 작은 PC 화면에서 중앙에서 왼쪽으로 550px */
     top: 400px;
   }
   
