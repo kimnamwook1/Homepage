@@ -14,7 +14,7 @@ export default function Consulting() {
       {/* 중앙 콘텐츠 - 흰색 블록 전체 페이지 확장 */}
       <div className="container mx-auto px-4 md:px-8 pt-64 pb-16">
         <div className="section-title-box mb-12 py-2 px-4 rounded-md shadow-md border border-gray-200 bg-white">
-          <h2 className="text-2xl md:text-3xl font-semibold mb-0 text-black">About consulting service</h2>
+          <h2 className="text-2xl md:text-3xl font-semibold mb-0 text-black">About Consulting Service</h2>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16">
