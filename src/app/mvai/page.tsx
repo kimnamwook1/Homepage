@@ -18,26 +18,61 @@ export default function MVAI() {
           <h2 className="text-2xl md:text-3xl font-semibold mb-0 text-black">Portfolio</h2>
         </div>
         
-        {/* 영상 3개를 위한 영역 */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-16">
-          {/* 첫 번째 영상 영역 */}
-          <div className="relative w-full pb-[56.25%] bg-gray-200 rounded-md overflow-hidden">
-            <div className="absolute inset-0 flex items-center justify-center">
-              <span className="text-gray-500">영상 (링크) 삽입 영역 1</span>
-            </div>
-          </div>
+        {/* MVAI 프로세스 영역 */}
+        <div className="mb-16">
+          <h3 className="text-xl md:text-2xl font-bold text-black mb-8 text-center">Our MVAI Process</h3>
           
-          {/* 두 번째 영상 영역 */}
-          <div className="relative w-full pb-[56.25%] bg-gray-200 rounded-md overflow-hidden">
-            <div className="absolute inset-0 flex items-center justify-center">
-              <span className="text-gray-500">영상 (링크) 삽입 영역 2</span>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10">
+            {/* 1단계: AI Music Analysis */}
+            <div className="bg-gray-50 p-6 rounded-md shadow-sm border border-gray-100">
+              <div className="flex items-start mb-4">
+                <span className="text-2xl font-bold text-gray-800 mr-2">1.</span>
+                <h4 className="text-xl font-semibold text-gray-800">AI Music Analysis</h4>
+              </div>
+              <p className="text-gray-700">
+                Analyzes various elements of the audio—such as the artist's style, lyrics, tempo, 
+                and instrumentation—to extract emotional tone and structure for creative direction.
+              </p>
             </div>
-          </div>
-          
-          {/* 세 번째 영상 영역 */}
-          <div className="relative w-full pb-[56.25%] bg-gray-200 rounded-md overflow-hidden">
-            <div className="absolute inset-0 flex items-center justify-center">
-              <span className="text-gray-500">영상 (링크) 삽입 영역 3</span>
+            
+            {/* 화살표 (모바일에서는 숨김) */}
+            <div className="hidden md:flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-gray-400">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </div>
+            
+            {/* 2단계: AI Music Video Generation */}
+            <div className="bg-gray-50 p-6 rounded-md shadow-sm border border-gray-100">
+              <div className="flex items-start mb-4">
+                <span className="text-2xl font-bold text-gray-800 mr-2">2.</span>
+                <h4 className="text-xl font-semibold text-gray-800">AI Music Video Generation</h4>
+              </div>
+              <p className="text-gray-700">
+                Generative AI transforms the analyzed music data into tailored visual elements, 
+                including scenes, effects, images, and motion—building the narrative flow of the video.
+              </p>
+            </div>
+            
+            {/* 화살표 (모바일에서는 숨김) */}
+            <div className="hidden md:flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-gray-400">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </div>
+            
+            {/* 3단계: Post-Production */}
+            <div className="bg-gray-50 p-6 rounded-md shadow-sm border border-gray-100">
+              <div className="flex items-start mb-4">
+                <span className="text-2xl font-bold text-gray-800 mr-2">3.</span>
+                <h4 className="text-xl font-semibold text-gray-800">Post-Production</h4>
+              </div>
+              <p className="text-gray-700">
+                Expert-led post-processing enhances quality through color grading, cinematic effects, 
+                editing, and sound mixing—delivering a polished, artist-aligned final product.
+              </p>
             </div>
           </div>
         </div>
