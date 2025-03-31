@@ -7,10 +7,10 @@ import Script from 'next/script';
 
 export const metadata: Metadata = {
   title: "TheJPC",
-  description: "We create opportunity.",
+  description: "We Create opportunities",
   openGraph: {
     title: "TheJPC",
-    description: "We create opportunity.",
+    description: "We Create opportunities",
     url: "https://www.thejpc.kr",
     siteName: "TheJPC",
     images: [
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "TheJPC",
-    description: "We create opportunity.",
+    description: "We Create opportunities",
     images: ["https://www.thejpc.kr/images/Thumbnail.png"],
   },
 };
@@ -42,7 +42,7 @@ export default function RootLayout({
       <head>
         {/* 직접 메타 태그 추가 */}
         <meta property="og:title" content="TheJPC" />
-        <meta property="og:description" content="We create opportunity." />
+        <meta property="og:description" content="We Create opportunities" />
         <meta property="og:url" content="https://www.thejpc.kr" />
         <meta property="og:image" content="https://www.thejpc.kr/images/Thumbnail.png" />
         <meta property="og:image:width" content="800" />
@@ -53,7 +53,7 @@ export default function RootLayout({
         
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="TheJPC" />
-        <meta name="twitter:description" content="We create opportunity." />
+        <meta name="twitter:description" content="We Create opportunities" />
         <meta name="twitter:image" content="https://www.thejpc.kr/images/Thumbnail.png" />
       </head>
       
@@ -69,7 +69,7 @@ export default function RootLayout({
               // OG 태그 추가
               const metaTags = [
                 { property: "og:title", content: "TheJPC" },
-                { property: "og:description", content: "We create opportunity." },
+                { property: "og:description", content: "We Create opportunities" },
                 { property: "og:url", content: "https://www.thejpc.kr" },
                 { property: "og:image", content: "https://www.thejpc.kr/images/Thumbnail.png" },
                 { property: "og:image:width", content: "800" },
@@ -79,7 +79,7 @@ export default function RootLayout({
                 { property: "og:locale", content: "ko_KR" },
                 { name: "twitter:card", content: "summary_large_image" },
                 { name: "twitter:title", content: "TheJPC" },
-                { name: "twitter:description", content: "We create opportunity." },
+                { name: "twitter:description", content: "We Create opportunities" },
                 { name: "twitter:image", content: "https://www.thejpc.kr/images/Thumbnail.png" }
               ];
               
