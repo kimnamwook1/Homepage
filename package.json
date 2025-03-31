@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -H 0.0.0.0 --turbopack",
+    "dev": "next dev -H 0.0.0.0 -p 3014 --turbopack",
     "build": "next build",
     "export": "next export",
-    "start": "next start",
+    "start": "next start -p 3014",
     "lint": "next lint"
   },
   "dependencies": {
