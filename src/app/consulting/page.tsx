@@ -18,7 +18,12 @@ export default function Consulting() {
           {/* 좌측 컬럼 - 임팩트 문구 */}
           <AnimatedSection delay={300} className="md:col-span-4">
             <h3 className="impact-statement text-3xl md:text-5xl lg:text-6xl font-bold text-black leading-tight mb-6">
-              Creative minds. Strategic moves. Real results.
+              Creative<br />
+              minds.<br />
+              Strategic<br />
+              moves.<br />
+              Real<br />
+              results.
             </h3>
           </AnimatedSection>
           
