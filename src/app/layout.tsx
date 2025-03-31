@@ -55,6 +55,8 @@ export default function RootLayout({
         <meta name="twitter:title" content="TheJPC" />
         <meta name="twitter:description" content="We Create opportunities" />
         <meta name="twitter:image" content="https://www.thejpc.kr/images/Thumbnail.png" />
+        
+        <meta name="naver-site-verification" content="82a0ff52f976a74b94ab84d5d01fea02f055594e" />
       </head>
       
       <Script id="og-meta-tags" strategy="afterInteractive">
