@@ -128,9 +128,31 @@ html, body {
   font-family: var(--font-pfdintextpro);
   margin: 0;
   padding: 0;
-  background-color: white;
-  color: black;
+  background-color: white !important;
+  color: black !important;
   overflow-x: hidden;
+}
+
+/* 다크모드 명시적 비활성화 - 모바일 포함 */
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: light; /* 다크모드 색상 체계 비활성화 */
+  }
+  
+  html, body {
+    background-color: white !important;
+    color: black !important;
+  }
+
+  /* 모든 텍스트 요소에 대한 강제 색상 지정 */
+  h1, h2, h3, h4, h5, h6, p, span, div, a, li, button {
+    color: black !important;
+  }
+
+  /* 배경색이 필요한 요소들에 대한 강제 배경색 지정 */
+  .bg-white, section, main, article, aside, header, footer {
+    background-color: white !important;
+  }
 }
 
 /* Main Navigation - CAA 스타일 적용 (반응형) */
