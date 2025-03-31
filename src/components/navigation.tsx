@@ -1,17 +1,18 @@
 "use client";
 
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 import Header from "./header";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { useMenu } from "@/lib/MenuContext";
 
 type NavigationProps = {
-  transparent?: boolean; // 추가: transparent 속성(실제로는 사용하지 않음)
+  transparent?: boolean;
 };
 
 const Navigation = ({ transparent = false }: NavigationProps) => {
   const pathname = usePathname();
+  const router = useRouter();
   const { activePage, menuActive, setActivePage, setMenuActive } = useMenu();
   const [animateIn, setAnimateIn] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -72,6 +73,15 @@ const Navigation = ({ transparent = false }: NavigationProps) => {
     ? "/images/TheJPC_logo_White.png" 
     : "/images/TheJPC_logo_Blacked.png";
 
+  // 네비게이션 핸들러 - 정적 내보내기에서도 작동하는 방식으로 수정
+  const handleNavigation = (page: string, path: string) => {
+    setActivePage(page);
+    setMenuActive(true);
+    
+    // 정적 내보내기에서 작동하도록 href 속성으로 이동처리
+    window.location.href = path;
+  };
+
   return (
     <>
       {/* Logo */}
@@ -81,40 +91,40 @@ const Navigation = ({ transparent = false }: NavigationProps) => {
       <nav className={`main-navigation ${menuActive ? 'menu-clicked' : ''} ${animateIn ? 'animate-in' : ''}`}>
         <ul>
           <li className="main-menu-item">
-            <Link 
+            <a 
               href="/consulting" 
               className={`main-menu-link ${activePage === 'consulting' ? 'active' : ''}`}
-              onClick={() => {
-                setActivePage('consulting');
-                setMenuActive(true);
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavigation('consulting', '/consulting');
               }}
             >
               For Consulting
-            </Link>
+            </a>
           </li>
           <li className="main-menu-item">
-            <Link 
+            <a 
               href="/mvai" 
               className={`main-menu-link ${activePage === 'mvai' ? 'active' : ''}`}
-              onClick={() => {
-                setActivePage('mvai');
-                setMenuActive(true);
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavigation('mvai', '/mvai');
               }}
             >
               For MVAI
-            </Link>
+            </a>
           </li>
           <li className="main-menu-item">
-            <Link 
+            <a 
               href="/unreal" 
               className={`main-menu-link ${activePage === 'unreal' ? 'active' : ''}`}
-              onClick={() => {
-                setActivePage('unreal');
-                setMenuActive(true);
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavigation('unreal', '/unreal');
               }}
             >
               For Unreal
-            </Link>
+            </a>
           </li>
 
           
@@ -122,28 +132,28 @@ const Navigation = ({ transparent = false }: NavigationProps) => {
           <li className="footer-navigation">
             <ul>
               <li>
-                <Link 
+                <a 
                   href="/about-us"
-                  onClick={() => {
-                    setActivePage('about-us');
-                    setMenuActive(true);
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNavigation('about-us', '/about-us');
                   }}
                   className={activePage === 'about-us' ? 'active' : ''}
                 >
                   About
-                </Link>
+                </a>
               </li>
               <li>
-                <Link 
+                <a 
                   href="/contact"
-                  onClick={() => {
-                    setActivePage('contact');
-                    setMenuActive(true);
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNavigation('contact', '/contact');
                   }}
                   className={activePage === 'contact' ? 'active' : ''}
                 >
                   Contact
-                </Link>
+                </a>
               </li>
             </ul>
           </li>

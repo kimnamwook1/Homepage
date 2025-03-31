@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from 'react';
-import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useMenu } from '@/lib/MenuContext';
 
@@ -33,10 +32,13 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ isOpen, toggleMenu }) => 
   }, [isOpen]);
 
   // 메뉴 항목 클릭 핸들러
-  const handleMenuItemClick = (page: string) => {
+  const handleMenuItemClick = (page: string, path: string) => {
     setActivePage(page);
     setMenuActive(true);
     toggleMenu(); // 메뉴 닫기
+    
+    // 정적 내보내기에서 작동하도록 직접 URL 변경
+    window.location.href = path;
   };
 
   if (!isVisible && !isOpen) {
@@ -61,51 +63,66 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ isOpen, toggleMenu }) => 
       <div className="p-12 pt-24 text-white w-full h-full bg-[#23272D]" style={{backgroundColor: '#23272D', height: '100vh', overflow: 'auto'}}>
         <ul className="space-y-6">
           <li className="text-3xl font-semibold">
-            <Link 
+            <a 
               href="/consulting" 
               className={`block transition-colors ${activePage === 'consulting' ? 'text-[#bb1c33]' : 'hover:text-gray-300'}`}
-              onClick={() => handleMenuItemClick('consulting')}
+              onClick={(e) => {
+                e.preventDefault();
+                handleMenuItemClick('consulting', '/consulting');
+              }}
             >
               For Consulting
-            </Link>
+            </a>
           </li>
           <li className="text-3xl font-semibold">
-            <Link 
+            <a 
               href="/mvai" 
               className={`block transition-colors ${activePage === 'mvai' ? 'text-[#bb1c33]' : 'hover:text-gray-300'}`}
-              onClick={() => handleMenuItemClick('mvai')}
+              onClick={(e) => {
+                e.preventDefault();
+                handleMenuItemClick('mvai', '/mvai');
+              }}
             >
               For MVAI
-            </Link>
+            </a>
           </li>
           <li className="text-3xl font-semibold">
-            <Link 
+            <a 
               href="/unreal" 
               className={`block transition-colors ${activePage === 'unreal' ? 'text-[#bb1c33]' : 'hover:text-gray-300'}`}
-              onClick={() => handleMenuItemClick('unreal')}
+              onClick={(e) => {
+                e.preventDefault();
+                handleMenuItemClick('unreal', '/unreal');
+              }}
             >
               For Unreal
-            </Link>
+            </a>
           </li>
           <li className="mt-12">
             <ul className="space-y-4">
               <li>
-                <Link 
+                <a 
                   href="/about-us"
                   className={`block transition-colors ${activePage === 'about-us' ? 'text-[#bb1c33]' : 'hover:text-gray-300'}`}
-                  onClick={() => handleMenuItemClick('about-us')}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleMenuItemClick('about-us', '/about-us');
+                  }}
                 >
                   About
-                </Link>
+                </a>
               </li>
               <li>
-                <Link 
+                <a 
                   href="/contact"
                   className={`block transition-colors ${activePage === 'contact' ? 'text-[#bb1c33]' : 'hover:text-gray-300'}`}
-                  onClick={() => handleMenuItemClick('contact')}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleMenuItemClick('contact', '/contact');
+                  }}
                 >
                   Contact
-                </Link>
+                </a>
               </li>
             </ul>
           </li>

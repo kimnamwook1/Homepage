@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState, useRef } from "react";
 import { useMenu } from "@/lib/MenuContext";
@@ -32,11 +31,13 @@ export default function Header({ transparent = false }: { transparent?: boolean 
         setHidden(false);
       }
       
-      // 스크롤 위치에 따라 배경 추가 여부 결정
-      if (currentScrollY > 20) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
+      // transparent가 아닐 때만 스크롤에 따라 배경 추가
+      if (!transparent) {
+        if (currentScrollY > 20) {
+          setScrolled(true);
+        } else {
+          setScrolled(false);
+        }
       }
       
       setLastScrollY(currentScrollY);
@@ -51,16 +52,24 @@ export default function Header({ transparent = false }: { transparent?: boolean 
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [lastScrollY]);
+  }, [lastScrollY, transparent]);
   
   // 메뉴 토글 함수
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
+  // 홈으로 이동 함수
+  const goToHome = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setActivePage(null);
+    setMenuActive(false);
+    window.location.href = '/';
+  };
+
   // 헤더 배경색 설정 - transparent 옵션에 따라 투명 또는 흰색으로 설정
-  const headerBg = transparent ? '' : 'bg-white';
-  const headerShadow = transparent ? '' : 'shadow-sm';
+  const headerBg = transparent ? '' : (scrolled ? 'bg-white' : '');
+  const headerShadow = transparent ? '' : (scrolled ? 'shadow-sm' : '');
   
   return (
     <header 
@@ -71,12 +80,9 @@ export default function Header({ transparent = false }: { transparent?: boolean 
     >
       <div className="container mx-auto relative py-4 px-4 md:py-6 md:px-8 flex justify-between items-center z-50">
         <div>
-          <Link 
+          <a 
             href="/" 
-            onClick={() => {
-              setActivePage(null);
-              setMenuActive(false);
-            }}
+            onClick={goToHome}
           >
             <Image 
               src={logoSrc}
@@ -86,7 +92,7 @@ export default function Header({ transparent = false }: { transparent?: boolean 
               priority
               className="w-[80px] md:w-[120px]"
             />
-          </Link>
+          </a>
         </div>
         
         {/* 햄버거 메뉴 버튼 */}

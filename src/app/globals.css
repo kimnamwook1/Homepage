@@ -38,6 +38,29 @@ body.overflow-hidden {
   min-height: 100vh !important;
 }
 
+/* 사이드바 내부 모든 텍스트 요소 스타일 강제 지정 */
+body .side-menu,
+body .side-menu *,
+body .side-menu a,
+body .side-menu span,
+body .side-menu div,
+body .side-menu button,
+body .side-menu h1,
+body .side-menu h2,
+body .side-menu h3,
+body .side-menu p,
+body .side-menu [class*="text-"],
+body .side-menu [class*="font-"] {
+  color: white !important;
+  transition: color 0.2s ease-in-out !important;
+}
+
+body .side-menu a:hover,
+body .side-menu span:hover,
+body .side-menu button:hover {
+  color: #FF0000 !important;
+}
+
 .side-menu::before {
   content: "";
   position: fixed;
@@ -144,13 +167,30 @@ html, body {
     color: black !important;
   }
 
-  /* 모든 텍스트 요소에 대한 강제 색상 지정 */
-  h1, h2, h3, h4, h5, h6, p, span, div, a, li, button {
+  /* 모든 텍스트 요소에 대한 강제 색상 지정 - 투명 헤더 페이지 제외 */
+  body:not([data-transparent="true"]) h1,
+  body:not([data-transparent="true"]) h2,
+  body:not([data-transparent="true"]) h3,
+  body:not([data-transparent="true"]) h4,
+  body:not([data-transparent="true"]) h5,
+  body:not([data-transparent="true"]) h6,
+  body:not([data-transparent="true"]) p,
+  body:not([data-transparent="true"]) span,
+  body:not([data-transparent="true"]) div,
+  body:not([data-transparent="true"]) a,
+  body:not([data-transparent="true"]) li,
+  body:not([data-transparent="true"]) button {
     color: black !important;
   }
 
-  /* 배경색이 필요한 요소들에 대한 강제 배경색 지정 */
-  .bg-white, section, main, article, aside, header, footer {
+  /* 배경색이 필요한 요소들에 대한 강제 배경색 지정 - 투명 헤더 페이지 제외 */
+  body:not([data-transparent="true"]) .bg-white,
+  body:not([data-transparent="true"]) section,
+  body:not([data-transparent="true"]) main,
+  body:not([data-transparent="true"]) article,
+  body:not([data-transparent="true"]) aside,
+  body:not([data-transparent="true"]) header,
+  body:not([data-transparent="true"]) footer {
     background-color: white !important;
   }
 }
@@ -225,17 +265,17 @@ html, body {
 
 /* 기본 호버 상태 */
 .main-navigation .main-menu-link:hover {
-  color: #bb1c33;
+  color: #bb1c33 !important;
 }
 
 /* 활성화된 메뉴 항목 */
 .main-navigation .main-menu-link.active {
-  color: #bb1c33;
+  color: #bb1c33 !important;
 }
 
-/* 메뉴 클릭 모드 - 다른 메뉴에 호버 효과 없음 */
+/* 메뉴 클릭 모드 - 모든 메뉴에 호버 효과 유지 */
 .menu-clicked .main-menu-link:not(.active):hover {
-  color: black; /* 호버해도 색상 변경 없음 */
+  color: #bb1c33 !important;
 }
 
 /* Footer Navigation */
@@ -277,19 +317,19 @@ html, body {
   transition: color 0.3s;
 }
 
-/* Footer 호버 상태 */
+/* 기본 호버 상태 */
 .footer-navigation a:hover {
-  color: #bb1c33;
+  color: #bb1c33 !important;
 }
 
-/* Footer 활성화 상태 */
+/* 활성화된 메뉴 항목 */
 .footer-navigation a.active {
-  color: #bb1c33;
+  color: #bb1c33 !important;
 }
 
-/* 메뉴 클릭 모드 - 다른 메뉴에 호버 효과 없음 (푸터 포함) */
+/* 메뉴 클릭 모드 - 다른 메뉴에 호버 효과 적용 */
 .menu-clicked .footer-navigation a:not(.active):hover {
-  color: black; /* 호버해도 색상 변경 없음 */
+  color: #bb1c33 !important;
 }
 
 /* 텍스트 문단 애니메이션 */
@@ -418,4 +458,18 @@ html, body {
   .footer-navigation a {
     font-size: 0.96rem; /* 1.2rem * 0.8 = 0.96rem */
   }
+}
+
+/* 햄버거 메뉴 내의 링크 스타일 */
+.side-menu a {
+  color: white !important;
+  transition: color 0.3s ease;
+}
+
+.side-menu a:hover {
+  color: #bb1c33 !important;
+}
+
+.side-menu a.active {
+  color: #bb1c33 !important;
 }
