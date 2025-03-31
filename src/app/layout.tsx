@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     siteName: "TheJPC",
     images: [
       {
-        url: "https://www.thejpc.kr/images/og-image.jpg",
+        url: "https://homepage-git-main-joanthankims-projects.vercel.app/images/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "TheJPC",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "TheJPC",
     description: "We create opportunity.",
-    images: ["https://www.thejpc.kr/images/og-image.jpg"],
+    images: ["https://homepage-git-main-joanthankims-projects.vercel.app/images/og-image.jpg"],
   },
 };
 
@@ -44,7 +44,7 @@ export default function RootLayout({
         <meta property="og:title" content="TheJPC" />
         <meta property="og:description" content="We create opportunity." />
         <meta property="og:url" content="https://www.thejpc.kr" />
-        <meta property="og:image" content="https://www.thejpc.kr/images/og-image.jpg" />
+        <meta property="og:image" content="https://homepage-git-main-joanthankims-projects.vercel.app/images/og-image.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:type" content="website" />
@@ -54,7 +54,7 @@ export default function RootLayout({
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="TheJPC" />
         <meta name="twitter:description" content="We create opportunity." />
-        <meta name="twitter:image" content="https://www.thejpc.kr/images/og-image.jpg" />
+        <meta name="twitter:image" content="https://homepage-git-main-joanthankims-projects.vercel.app/images/og-image.jpg" />
       </head>
       
       <Script id="og-meta-tags" strategy="afterInteractive">
@@ -71,7 +71,7 @@ export default function RootLayout({
                 { property: "og:title", content: "TheJPC" },
                 { property: "og:description", content: "We create opportunity." },
                 { property: "og:url", content: "https://www.thejpc.kr" },
-                { property: "og:image", content: "https://www.thejpc.kr/images/og-image.jpg" },
+                { property: "og:image", content: "https://homepage-git-main-joanthankims-projects.vercel.app/images/og-image.jpg" },
                 { property: "og:image:width", content: "1200" },
                 { property: "og:image:height", content: "630" },
                 { property: "og:type", content: "website" },
@@ -80,7 +80,7 @@ export default function RootLayout({
                 { name: "twitter:card", content: "summary_large_image" },
                 { name: "twitter:title", content: "TheJPC" },
                 { name: "twitter:description", content: "We create opportunity." },
-                { name: "twitter:image", content: "https://www.thejpc.kr/images/og-image.jpg" }
+                { name: "twitter:image", content: "https://homepage-git-main-joanthankims-projects.vercel.app/images/og-image.jpg" }
               ];
               
               metaTags.forEach(({ property, name, content }) => {
