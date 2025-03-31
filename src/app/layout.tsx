@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     siteName: "TheJPC",
     images: [
       {
-        url: "https://www.thejpc.kr/images/thumbnail.png", // 절대 URL 사용
+        url: "https://www.thejpc.kr/images/thumbanil.png", // 절대 URL 사용
         width: 1200,
         height: 630,
         alt: "TheJPC",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "TheJPC",
     description: "We create opportunity.",
-    images: ["https://www.thejpc.kr/images/thumbnail.png"], // 트위터용 이미지도 동일하게 설정
+    images: ["https://www.thejpc.kr/images/thumbanil.png"], // 트위터용 이미지도 동일하게 설정
   },
 };
 
@@ -44,7 +44,7 @@ export default function RootLayout({
         <meta property="og:title" content="TheJPC" />
         <meta property="og:description" content="We create opportunity." />
         <meta property="og:url" content="https://www.thejpc.kr" />
-        <meta property="og:image" content="https://www.thejpc.kr/images/thumbnail.png" />
+        <meta property="og:image" content="https://www.thejpc.kr/images/thumbanil.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:type" content="website" />
@@ -54,7 +54,7 @@ export default function RootLayout({
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="TheJPC" />
         <meta name="twitter:description" content="We create opportunity." />
-        <meta name="twitter:image" content="https://www.thejpc.kr/images/thumbnail.png" />
+        <meta name="twitter:image" content="https://www.thejpc.kr/images/thumbanil.png" />
       </head>
       <body className={`${pfdintextpro.variable}`}>
         <MenuProvider>
